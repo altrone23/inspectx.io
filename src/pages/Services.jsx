@@ -1,6 +1,7 @@
 // src/pages/Services.jsx
 import React, { useState } from 'react';
-import { FaCamera, FaFire, FaSearch, FaRobot, FaChartLine } from 'react-icons/fa';
+import { FaCamera, FaFire, FaSearch, FaRobot, FaChartLine, FaTrain, FaBolt, FaWater } from 'react-icons/fa';
+import { TbDrone, TbRotate360 } from 'react-icons/tb';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Import slides
@@ -11,35 +12,77 @@ import slide3 from '../assets/slides/3.png';
 
 const services = [
   {
-    icon: <FaCamera size={30} />,
-    title: "Visual AI Inspection",
-    description: "Automated visual checks using AI models to detect defects with high precision.",
-    slides: [slide1, slide2, slide3, slide1, slide2], // Reusing slides for demo
+    icon: <TbRotate360 size={30} />,
+    title: "Reliability Condition Monitoring (RCM)",
+    description: "Advanced monitoring of rotating equipment like motors, pumps, turbines, and compressors to detect potential failures early and optimize maintenance.",
+    slides: [slide1, slide2, slide3],
+    features: [
+      "Vibration analysis for early bearing failure detection",
+      "Oil and lubricant quality assessment",
+      "Thermal imaging to identify overheating components",
+      "Electrical parameter monitoring for motors"
+    ]
   },
   {
-    icon: <FaFire size={30} />,
-    title: "Thermal Imaging",
-    description: "Detect heat-based anomalies in equipment and infrastructure to prevent failures and improve safety.",
-    slides: [slide2, slide3, slide1, slide2, slide3], // Reusing slides for demo
+    icon: <TbDrone size={30} />,
+    title: "Railway Track Inspection",
+    description: "Drone and AI-powered railway track inspection that ensures safety, reduces costs, and increases efficiency compared to traditional methods.",
+    slides: [slide2, slide3, slide1],
+    features: [
+      "High-definition and thermal imaging of track components",
+      "LiDAR mapping for precise track geometry analysis",
+      "AI-powered detection of cracks, misalignments, and wear",
+      "Real-time data transmission and analytics"
+    ]
   },
   {
     icon: <FaSearch size={30} />,
-    title: "Defect Detection",
-    description: "Real-time defect classification using edge or cloud AI with comprehensive reporting and analysis.",
-    slides: [slide3, slide1, slide2, slide3, slide1], // Reusing slides for demo
+    title: "NDT Testing",
+    description: "Non-Destructive Testing services for medium to large scale process industries with comprehensive reporting and analysis.",
+    slides: [slide3, slide1, slide2],
+    features: [
+      "Ultrasonic and radiographic testing",
+      "Magnetic particle and dye penetrant inspection",
+      "Automated defect classification using AI",
+      "Digital reporting and compliance documentation"
+    ]
   },
   {
-    icon: <FaRobot size={30} />,
-    title: "Custom AI Models",
-    description: "Train custom models for specific inspection workflows tailored to your industry requirements.",
-    slides: [slide1, slide3, slide2, slide1, slide3], // Reusing slides for demo
+    icon: <FaBolt size={30} />,
+    title: "Power Line Inspection",
+    description: "Drone-based power line inspections that enhance safety, efficiency, and cost-effectiveness with AI-powered defect detection.",
+    slides: [slide1, slide3, slide2],
+    features: [
+      "Visual and thermal inspection of power infrastructure",
+      "LiDAR mapping for vegetation management",
+      "AI detection of loose insulators, corrosion, and damage",
+      "Predictive maintenance scheduling"
+    ]
   },
   {
-    icon: <FaChartLine size={30} />,
-    title: "Performance Analytics",
-    description: "Comprehensive analysis and reporting on inspection results with actionable insights.",
-    slides: [slide2, slide1, slide3, slide2, slide1], // Reusing slides for demo
+    icon: <FaCamera size={30} />,
+    title: "Solar Panel Inspection",
+    description: "Quick and accurate drone-based solar panel inspections that identify defects, hotspots, and performance issues.",
+    slides: [slide2, slide1, slide3],
+    features: [
+      "Thermal imaging to detect hotspots and cell failures",
+      "Automated panel efficiency assessment",
+      "Vegetation and shading impact analysis",
+      "Post-storm damage assessment"
+    ]
   },
+  {
+    icon: <FaWater size={30} />,
+    title: "Water Line Inspection",
+    description: "Advanced inspection of underground and on-ground water pipelines using non-invasive technologies and AI analytics.",
+    slides: [slide3, slide2, slide1],
+    features: [
+      "Leak detection and localization",
+      "Ground penetrating radar for underground inspection",
+      "Thermal and acoustic anomaly detection",
+      "3D mapping of water infrastructure"
+    ]
+  }
 ];
 
 const ServiceSlider = ({ slides }) => {
@@ -105,7 +148,7 @@ const Services = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">Our Services</h2>
           <p className="mb-6 text-lg text-gray-600 max-w-2xl mx-auto">
-            Smart inspection tools powered by cutting-edge AI for industries that demand precision and reliability
+            AI-powered inspection solutions for industries that demand precision, reliability, and safety
           </p>
         </div>
 
@@ -130,9 +173,9 @@ const Services = () => {
                 </div>
                 <p className="text-gray-600 text-lg leading-relaxed">{service.description}</p>
                 <ul className="list-disc pl-5 text-gray-600 space-y-2">
-                  <li>Feature 1 for {service.title}</li>
-                  <li>Feature 2 for {service.title}</li>
-                  <li>Feature 3 for {service.title}</li>
+                  {service.features.map((feature, i) => (
+                    <li key={i}>{feature}</li>
+                  ))}
                 </ul>
                 <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all">
                   Learn More

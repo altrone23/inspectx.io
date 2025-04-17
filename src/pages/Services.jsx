@@ -12,6 +12,7 @@ import slide3 from '../assets/slides/3.png';
 
 const services = [
   {
+    id: "visual-ai",
     icon: <TbRotate360 size={30} />,
     title: "Reliability Condition Monitoring (RCM)",
     description: "Advanced monitoring of rotating equipment like motors, pumps, turbines, and compressors to detect potential failures early and optimize maintenance.",
@@ -24,6 +25,7 @@ const services = [
     ]
   },
   {
+    id: "defect-detection",
     icon: <TbDrone size={30} />,
     title: "Railway Track Inspection",
     description: "Drone and AI-powered railway track inspection that ensures safety, reduces costs, and increases efficiency compared to traditional methods.",
@@ -36,6 +38,7 @@ const services = [
     ]
   },
   {
+    id: "custom-models",
     icon: <FaSearch size={30} />,
     title: "NDT Testing",
     description: "Non-Destructive Testing services for medium to large scale process industries with comprehensive reporting and analysis.",
@@ -48,6 +51,7 @@ const services = [
     ]
   },
   {
+    id: "power-inspection",
     icon: <FaBolt size={30} />,
     title: "Power Line Inspection",
     description: "Drone-based power line inspections that enhance safety, efficiency, and cost-effectiveness with AI-powered defect detection.",
@@ -60,6 +64,7 @@ const services = [
     ]
   },
   {
+    id: "thermal-imaging",
     icon: <FaCamera size={30} />,
     title: "Solar Panel Inspection",
     description: "Quick and accurate drone-based solar panel inspections that identify defects, hotspots, and performance issues.",
@@ -72,6 +77,7 @@ const services = [
     ]
   },
   {
+    id: "analytics",
     icon: <FaWater size={30} />,
     title: "Water Line Inspection",
     description: "Advanced inspection of underground and on-ground water pipelines using non-invasive technologies and AI analytics.",
@@ -155,7 +161,7 @@ const ServiceSlider = ({ slides }) => {
 
 const Services = () => {
   return (
-    <section className="py-16 px-6 bg-white text-gray-800">
+    <section id="top" className="py-16 px-6 bg-white text-gray-800">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">Our Services</h2>
@@ -167,6 +173,7 @@ const Services = () => {
         <div className="space-y-24">
           {services.map((service, index) => (
             <div 
+              id={service.id}
               key={index}
               className={`flex flex-col ${
                 index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"

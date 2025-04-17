@@ -28,7 +28,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-16">
+    <section id="top" className="relative min-h-screen flex items-center justify-center py-16">
       {/* Fixed image container */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-100"

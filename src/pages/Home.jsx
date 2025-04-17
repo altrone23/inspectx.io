@@ -7,7 +7,9 @@ import CTA from '../components/CTA';
 const Home = () => {
   return (
     <>
-      <Hero />
+      <div id="top">
+        <Hero />
+      </div>
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white py-20 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 space-y-6">

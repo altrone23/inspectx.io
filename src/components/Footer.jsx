@@ -38,6 +38,7 @@ const Footer = () => {
             <li><HashLink to="/services#top" className="text-gray-300 hover:text-white" smooth>Services</HashLink></li>
             <li><HashLink to="/features#top" className="text-gray-300 hover:text-white" smooth>Features</HashLink></li>
             <li><HashLink to="/contact#top" className="text-gray-300 hover:text-white" smooth>Contact</HashLink></li>
+            <li><HashLink to="/training#top" className="text-gray-300 hover:text-white" smooth>Training</HashLink></li>
           </ul>
         </div>
 

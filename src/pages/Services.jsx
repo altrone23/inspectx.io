@@ -82,6 +82,18 @@ const services = [
       "Thermal and acoustic anomaly detection",
       "3D mapping of water infrastructure"
     ]
+  },
+  {
+    icon: <FaWater size={30} />,
+    title: "Water Line Inspection",
+    description: "Advanced inspection of underground and on-ground water pipelines using non-invasive technologies and AI analytics.",
+    slides: [slide3, slide2, slide1],
+    features: [
+      "Leak detection and localization",
+      "Ground penetrating radar for underground inspection",
+      "Thermal and acoustic anomaly detection",
+      "3D mapping of water infrastructure"
+    ]
   }
 ];
 

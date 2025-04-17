@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
       
       <div className="max-w-7xl mx-auto pt-8 mt-8 border-t border-gray-700 text-center text-gray-400">
-        <p>&copy; {currentYear} INSPECTX Pro. All rights reserved.</p>
+        <p>&copy; {currentYear} INSPECTX. All rights reserved.</p>
       </div>
     </footer>
   );

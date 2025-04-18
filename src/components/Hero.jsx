@@ -31,12 +31,6 @@ const Hero = () => {
           >
             Explore Services
           </Link>
-          <Link
-            to="/contact"
-            className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
-          >
-            Request a Demo
-          </Link>
         </div>
       </div>
     </section>

@@ -1,86 +1,63 @@
-import React, { useState } from 'react';
-import { FaChalkboardTeacher, FaRobot, FaDrone } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { FaBook, FaChalkboardTeacher, FaTools, FaQuestionCircle } from 'react-icons/fa';
 import slide1 from '../assets/training/1.png';
 import slide2 from '../assets/training/2.png';
 import slide3 from '../assets/training/3.png';
 
 const trainingSections = [
   {
-    id: 'ai-training',
-    icon: <FaRobot size={30} />,
-    title: 'AI for Industrial Inspections',
-    description: 'Learn the fundamentals and applications of AI in industrial inspection, including computer vision, defect detection, and predictive analytics.',
-    slides: [slide1, slide2, slide3],
+    id: 'cat1',
+    icon: <FaBook size={30} />,
+    title: 'CAT1: Vibration Analysis',
+    description: 'Foundational training for vibration analysis, covering the basics of vibration, data collection, and fault diagnosis.',
+    image: slide1,
     features: [
-      'Introduction to AI and machine learning',
-      'Computer vision for defect detection',
-      'Data annotation and model training',
-      'Deploying AI models in real-world scenarios'
+      'Introduction to vibration principles',
+      'Vibration data collection techniques',
+      'Basic fault diagnosis',
+      'Hands-on practice with vibration tools'
     ]
   },
   {
-    id: 'drone-training',
-    icon: <FaDrone size={30} />,
-    title: 'Drone Operations & Safety',
-    description: 'Master drone piloting, safety protocols, and data collection techniques for aerial inspections in various industries.',
-    slides: [slide2, slide3, slide1],
-    features: [
-      'Drone hardware overview',
-      'Flight planning and regulations',
-      'Aerial data capture best practices',
-      'Safety and compliance procedures'
-    ]
-  },
-  {
-    id: 'instructor-certification',
+    id: 'cat2',
     icon: <FaChalkboardTeacher size={30} />,
-    title: 'Instructor Certification Program',
-    description: 'Become a certified instructor to deliver AI and drone inspection training, with a focus on curriculum design and hands-on teaching.',
-    slides: [slide3, slide1, slide2],
+    title: 'CAT2: Advanced Vibration Analysis',
+    description: 'Intermediate to advanced concepts in vibration analysis, including signal processing, advanced diagnostics, and case studies.',
+    image: slide2,
     features: [
-      'Training delivery techniques',
-      'Curriculum development',
-      'Assessment and certification standards',
-      'Hands-on teaching practice'
+      'Signal processing fundamentals',
+      'Advanced fault diagnostics',
+      'Case studies and real-world examples',
+      'Reporting and communication of findings'
+    ]
+  },
+  {
+    id: 'cat3',
+    icon: <FaTools size={30} />,
+    title: 'CAT3: Reliability & Asset Management',
+    description: 'Comprehensive training on reliability engineering, asset management, and predictive maintenance strategies.',
+    image: slide3,
+    features: [
+      'Reliability-centered maintenance (RCM)',
+      'Asset management best practices',
+      'Predictive maintenance planning',
+      'Performance analytics and KPIs'
+    ]
+  },
+  {
+    id: 'filler',
+    icon: <FaQuestionCircle size={30} />,
+    title: 'Other Courses',
+    description: 'Explore additional training programs including infrared thermography, field lubrication, turbomachinery, and more.',
+    image: slide1,
+    features: [
+      'Infrared Thermography Basics',
+      'Field Lubrication Techniques',
+      'Turbomachinery Fundamentals',
+      'Asset Reliability Practitioner (ARP)'
     ]
   }
 ];
-
-const TrainingSlider = ({ slides }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  return (
-    <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.img
-          key={currentSlide}
-          src={slides[currentSlide]}
-          alt={`Slide ${currentSlide + 1}`}
-          className="absolute w-full h-full object-cover"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-        />
-      </AnimatePresence>
-      <div className="absolute inset-0 flex items-center justify-between px-4">
-        <button onClick={prevSlide} className="bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all">&#10094;</button>
-        <button onClick={nextSlide} className="bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all">&#10095;</button>
-      </div>
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`h-2 w-2 rounded-full ${index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-50'}`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
 
 const Training = () => (
   <section id="top" className="py-16 px-6 bg-white text-gray-800">
@@ -88,7 +65,7 @@ const Training = () => (
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold mb-6">Training Programs</h2>
         <p className="mb-6 text-lg text-gray-600 max-w-2xl mx-auto">
-          Upskill your team with hands-on AI and drone inspection training, led by industry experts.
+          Upskill your team with hands-on reliability, vibration, and asset management training, led by industry experts.
         </p>
       </div>
       <div className="space-y-24">
@@ -99,7 +76,7 @@ const Training = () => (
             className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
           >
             <div className="w-full lg:w-1/2">
-              <TrainingSlider slides={section.slides} />
+              <img src={section.image} alt={section.title} className="rounded-xl w-full h-64 md:h-80 lg:h-96 object-cover" />
             </div>
             <div className="w-full lg:w-1/2 space-y-4">
               <div className="flex items-center gap-4 mb-2">

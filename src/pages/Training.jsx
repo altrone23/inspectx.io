@@ -1,8 +1,5 @@
 import React from 'react';
 import { FaBook, FaChalkboardTeacher, FaTools, FaQuestionCircle } from 'react-icons/fa';
-import slide1 from '../assets/training/1.png';
-import slide2 from '../assets/training/2.png';
-import slide3 from '../assets/training/3.png';
 
 const trainingSections = [
   {
@@ -10,7 +7,7 @@ const trainingSections = [
     icon: <FaBook size={30} />,
     title: 'CAT1: Vibration Analysis',
     description: 'Foundational training for vibration analysis, covering the basics of vibration, data collection, and fault diagnosis.',
-    image: slide1,
+    image: require('../assets/training/1.png'),
     features: [
       'Introduction to vibration principles',
       'Vibration data collection techniques',
@@ -23,7 +20,7 @@ const trainingSections = [
     icon: <FaChalkboardTeacher size={30} />,
     title: 'CAT2: Advanced Vibration Analysis',
     description: 'Intermediate to advanced concepts in vibration analysis, including signal processing, advanced diagnostics, and case studies.',
-    image: slide2,
+    image: require('../assets/training/2.png'),
     features: [
       'Signal processing fundamentals',
       'Advanced fault diagnostics',
@@ -36,7 +33,7 @@ const trainingSections = [
     icon: <FaTools size={30} />,
     title: 'CAT3: Reliability & Asset Management',
     description: 'Comprehensive training on reliability engineering, asset management, and predictive maintenance strategies.',
-    image: slide3,
+    image: require('../assets/training/3.png'),
     features: [
       'Reliability-centered maintenance (RCM)',
       'Asset management best practices',
@@ -49,7 +46,7 @@ const trainingSections = [
     icon: <FaQuestionCircle size={30} />,
     title: 'Other Courses',
     description: 'Explore additional training programs including infrared thermography, field lubrication, turbomachinery, and more.',
-    image: slide1,
+    image: null,
     features: [
       'Infrared Thermography Basics',
       'Field Lubrication Techniques',

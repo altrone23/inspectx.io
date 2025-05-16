@@ -1,14 +1,42 @@
 // src/pages/Services.jsx
 import React, { useState } from 'react';
-import { FaCamera, FaFire, FaSearch, FaRobot, FaChartLine, FaTrain, FaBolt, FaWater } from 'react-icons/fa';
+import { FaCamera, FaSearch, FaBolt, FaWater } from 'react-icons/fa';
 import { TbDrone, TbRotate360 } from 'react-icons/tb';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Import slides
-import slide1 from '../assets/slides/1.png';
-import slide2 from '../assets/slides/2.png';
-import slide3 from '../assets/slides/3.png';
-// Note: You'll need to add slide4.png and slide5.png to your assets folder
+// RCM slides
+import rcmSlide1 from '../assets/slides/RCM/1.png';
+import rcmSlide2 from '../assets/slides/RCM/2.jpeg';
+import rcmSlide3 from '../assets/slides/RCM/3.webp';
+import rcmSlide4 from '../assets/slides/RCM/4.avif';
+import rcmSlide5 from '../assets/slides/RCM/5.png';
+
+// Track inspection slides
+import trackSlide1 from '../assets/slides/TRACKS/1.jpg';
+import trackSlide2 from '../assets/slides/TRACKS/2.jpg';
+import trackSlide3 from '../assets/slides/TRACKS/3.webp';
+import trackSlide4 from '../assets/slides/TRACKS/5.jpeg';
+import trackSlide5 from '../assets/slides/TRACKS/8.png';
+
+// Power line inspection slides
+import powerSlide1 from '../assets/slides/Power line/1.jpg';
+import powerSlide2 from '../assets/slides/Power line/2.webp';
+import powerSlide3 from '../assets/slides/Power line/3.webp';
+import powerSlide4 from '../assets/slides/Power line/4.jpg';
+import powerSlide5 from '../assets/slides/Power line/6.jpg';
+
+// Drone inspection slides
+import droneSlide1 from '../assets/slides/Drone pics/1.jpg';
+import droneSlide2 from '../assets/slides/Drone pics/2.webp';
+import droneSlide3 from '../assets/slides/Drone pics/3.webp';
+import droneSlide4 from '../assets/slides/Drone pics/5.jpeg';
+import droneSlide5 from '../assets/slides/Drone pics/8.webp';
+
+// AI inspection slides
+import aiSlide1 from '../assets/slides/AI pics/AI pics/ai-generated-art-898.webp';
+import aiSlide2 from '../assets/slides/AI pics/AI pics/1706043993369.png';
+import aiSlide3 from '../assets/slides/AI pics/AI pics/istockphoto-1159763217-612x612.jpg';
 
 const services = [
   {
@@ -16,7 +44,7 @@ const services = [
     icon: <TbRotate360 size={30} />,
     title: "Reliability Condition Monitoring (RCM)",
     description: "Advanced monitoring of rotating equipment like motors, pumps, turbines, and compressors to detect potential failures early and optimize maintenance.",
-    slides: [slide1, slide2, slide3],
+    slides: [rcmSlide1, rcmSlide2, rcmSlide3, rcmSlide4, rcmSlide5],
     features: [
       "Vibration analysis for early bearing failure detection",
       "Oil and lubricant quality assessment",
@@ -29,7 +57,7 @@ const services = [
     icon: <TbDrone size={30} />,
     title: "Railway Track Inspection",
     description: "Drone and AI-powered railway track inspection that ensures safety, reduces costs, and increases efficiency compared to traditional methods.",
-    slides: [slide2, slide3, slide1],
+    slides: [trackSlide1, trackSlide2, trackSlide3, trackSlide4, trackSlide5],
     features: [
       "High-definition and thermal imaging of track components",
       "LiDAR mapping for precise track geometry analysis",
@@ -42,7 +70,7 @@ const services = [
     icon: <FaSearch size={30} />,
     title: "NDT Testing",
     description: "Non-Destructive Testing services for medium to large scale process industries with comprehensive reporting and analysis.",
-    slides: [slide3, slide1, slide2],
+    slides: [aiSlide1, aiSlide2, aiSlide3],
     features: [
       "Ultrasonic and radiographic testing",
       "Magnetic particle and dye penetrant inspection",
@@ -55,7 +83,7 @@ const services = [
     icon: <FaBolt size={30} />,
     title: "Power Line Inspection",
     description: "Drone-based power line inspections that enhance safety, efficiency, and cost-effectiveness with AI-powered defect detection.",
-    slides: [slide1, slide3, slide2],
+    slides: [powerSlide1, powerSlide2, powerSlide3, powerSlide4, powerSlide5],
     features: [
       "Visual and thermal inspection of power infrastructure",
       "LiDAR mapping for vegetation management",
@@ -68,7 +96,7 @@ const services = [
     icon: <FaCamera size={30} />,
     title: "Solar Panel Inspection",
     description: "Quick and accurate drone-based solar panel inspections that identify defects, hotspots, and performance issues.",
-    slides: [slide2, slide1, slide3],
+    slides: [droneSlide1, droneSlide2, droneSlide3, droneSlide4, droneSlide5],
     features: [
       "Thermal imaging to detect hotspots and cell failures",
       "Automated panel efficiency assessment",
@@ -81,26 +109,14 @@ const services = [
     icon: <FaWater size={30} />,
     title: "Water Line Inspection",
     description: "Advanced inspection of underground and on-ground water pipelines using non-invasive technologies and AI analytics.",
-    slides: [slide3, slide2, slide1],
+    slides: [aiSlide3, aiSlide2, aiSlide1],
     features: [
       "Leak detection and localization",
       "Ground penetrating radar for underground inspection",
       "Thermal and acoustic anomaly detection",
       "3D mapping of water infrastructure"
     ]
-  },
-  {
-    icon: <FaWater size={30} />,
-    title: "Water Line Inspection",
-    description: "Advanced inspection of underground and on-ground water pipelines using non-invasive technologies and AI analytics.",
-    slides: [slide3, slide2, slide1],
-    features: [
-      "Leak detection and localization",
-      "Ground penetrating radar for underground inspection",
-      "Thermal and acoustic anomaly detection",
-      "3D mapping of water infrastructure"
-    ]
-  }
+  }, 
 ];
 
 const ServiceSlider = ({ slides }) => {

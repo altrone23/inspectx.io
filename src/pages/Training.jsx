@@ -1,13 +1,19 @@
 import React from 'react';
 import { FaBook, FaChalkboardTeacher, FaTools, FaQuestionCircle } from 'react-icons/fa';
 
+// Fallback component for missing images
+const FallbackImage = ({ alt }) => (
+  <div className="flex items-center justify-center bg-gray-200 text-gray-400 rounded-xl w-full h-64 md:h-80 lg:h-96">
+    <span className="text-2xl">No Image</span>
+  </div>
+);
+
 const trainingSections = [
-  {
-    id: 'cat1',
+  {    id: 'cat1',
     icon: <FaBook size={30} />,
     title: 'CAT1: Vibration Analysis',
     description: 'Foundational training for vibration analysis, covering the basics of vibration, data collection, and fault diagnosis.',
-    image: require('../assets/training/1.png'),
+    image: '../assets/training/1.png',
     features: [
       'Introduction to vibration principles',
       'Vibration data collection techniques',
@@ -15,12 +21,11 @@ const trainingSections = [
       'Hands-on practice with vibration tools'
     ]
   },
-  {
-    id: 'cat2',
+  {    id: 'cat2',
     icon: <FaChalkboardTeacher size={30} />,
     title: 'CAT2: Advanced Vibration Analysis',
     description: 'Intermediate to advanced concepts in vibration analysis, including signal processing, advanced diagnostics, and case studies.',
-    image: require('../assets/training/2.png'),
+    image: '../assets/training/2.png',
     features: [
       'Signal processing fundamentals',
       'Advanced fault diagnostics',
@@ -28,12 +33,11 @@ const trainingSections = [
       'Reporting and communication of findings'
     ]
   },
-  {
-    id: 'cat3',
+  {    id: 'cat3',
     icon: <FaTools size={30} />,
     title: 'CAT3: Reliability & Asset Management',
     description: 'Comprehensive training on reliability engineering, asset management, and predictive maintenance strategies.',
-    image: require('../assets/training/3.png'),
+    image: '../assets/training/3.png',
     features: [
       'Reliability-centered maintenance (RCM)',
       'Asset management best practices',
@@ -71,9 +75,22 @@ const Training = () => (
             id={section.id}
             key={section.id}
             className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
-          >
-            <div className="w-full lg:w-1/2">
-              <img src={section.image} alt={section.title} className="rounded-xl w-full h-64 md:h-80 lg:h-96 object-cover" />
+          >            <div className="w-full lg:w-1/2">
+              {section.image ? (
+                <img 
+                  src={section.image} 
+                  alt={section.title} 
+                  className="rounded-xl w-full h-64 md:h-80 lg:h-96 object-cover"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.parentNode.appendChild(
+                      document.createElement('div')
+                    ).outerHTML = `<div class="flex items-center justify-center bg-gray-200 text-gray-400 rounded-xl w-full h-64 md:h-80 lg:h-96"><span class="text-2xl">No Image</span></div>`;
+                  }} 
+                />
+              ) : (
+                <FallbackImage alt={section.title} />
+              )}
             </div>
             <div className="w-full lg:w-1/2 space-y-4">
               <div className="flex items-center gap-4 mb-2">

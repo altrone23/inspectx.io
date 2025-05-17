@@ -26,12 +26,18 @@ import powerSlide3 from '../assets/slides/Power line/3.webp';
 import powerSlide4 from '../assets/slides/Power line/4.jpg';
 import powerSlide5 from '../assets/slides/Power line/6.jpg';
 
-// Drone inspection slides
-import droneSlide1 from '../assets/slides/Drone pics/1.jpg';
-import droneSlide2 from '../assets/slides/Drone pics/2.webp';
-import droneSlide3 from '../assets/slides/Drone pics/3.webp';
-import droneSlide4 from '../assets/slides/Drone pics/5.jpeg';
-import droneSlide5 from '../assets/slides/Drone pics/8.webp';
+// Solar panel inspection slides
+import solarSlide1 from '../assets/slides/solar/s1.jpg';
+import solarSlide2 from '../assets/slides/solar/s2.jpg';
+import solarSlide3 from '../assets/slides/solar/s3.jpg';
+import solarSlide4 from '../assets/slides/solar/s4.jpeg';
+import solarSlide5 from '../assets/slides/solar/s5.jpg';
+
+// Water line inspection slides
+import waterSlide1 from '../assets/slides/water/w1.jpg';
+import waterSlide2 from '../assets/slides/water/w2.jpg';
+import waterSlide3 from '../assets/slides/water/w3.jpg';
+import waterSlide4 from '../assets/slides/water/w4.jpg';
 
 // AI inspection slides
 import aiSlide1 from '../assets/slides/AI pics/AI pics/ai-generated-art-898.webp';
@@ -90,13 +96,12 @@ const services = [
       "AI detection of loose insulators, corrosion, and damage",
       "Predictive maintenance scheduling"
     ]
-  },
-  {
+  },  {
     id: "thermal-imaging",
     icon: <FaCamera size={30} />,
     title: "Solar Panel Inspection",
     description: "Quick and accurate drone-based solar panel inspections that identify defects, hotspots, and performance issues.",
-    slides: [droneSlide1, droneSlide2, droneSlide3, droneSlide4, droneSlide5],
+    slides: [solarSlide1, solarSlide2, solarSlide3, solarSlide4, solarSlide5],
     features: [
       "Thermal imaging to detect hotspots and cell failures",
       "Automated panel efficiency assessment",
@@ -109,7 +114,7 @@ const services = [
     icon: <FaWater size={30} />,
     title: "Water Line Inspection",
     description: "Advanced inspection of underground and on-ground water pipelines using non-invasive technologies and AI analytics.",
-    slides: [aiSlide3, aiSlide2, aiSlide1],
+    slides: [waterSlide1, waterSlide2, waterSlide3, waterSlide4],
     features: [
       "Leak detection and localization",
       "Ground penetrating radar for underground inspection",

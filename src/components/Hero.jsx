@@ -5,15 +5,12 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
   return (
     <section className="relative h-screen flex flex-col justify-center items-center text-center text-white overflow-hidden">
-      {/* Video background with overlay */}
+      {/* Image background with overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
-      <video
+      <img
         className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
-        src={videoSrc}
-        autoPlay
-        loop
-        muted
-        playsInline
+        src={require('../assets/hero.jpg')}
+        alt="Hero background"
       />
       
       {/* Content */}
@@ -22,16 +19,6 @@ const Hero = () => {
           AI-Powered <span className="text-blue-300">Inspection</span> Solutions
         </h1><br />
         <br />
-        
-        
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <Link
-            to="/services"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition"
-          >
-            Explore Services
-          </Link>
-        </div>
       </div>
     </section>
   );

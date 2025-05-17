@@ -18,7 +18,7 @@ const Home = () => {
               with <span className="text-blue-300">AI-Powered</span> Technology
             </h1>
             <p className="text-lg text-gray-200">
-              INSPECTX Pro simplifies and accelerates inspections with real-time analytics,
+              INSPECTX simplifies and accelerates inspections with real-time analytics,
               automation, and customizable workflows for all industries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-4">

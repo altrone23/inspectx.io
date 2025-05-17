@@ -41,20 +41,7 @@ const Home = () => {
         </div>
         
         {/* Service tags added here */}
-        <div className="flex flex-wrap justify-center gap-8 mt-16">
-          <button className="border border-white hover:bg-white hover:text-blue-900 text-white font-semibold px-6 py-3 rounded-lg transition">
-            <span>Railway Inspections</span>
-          </button>
-          <button className="border border-white hover:bg-white hover:text-blue-900 text-white font-semibold px-6 py-3 rounded-lg transition">
-            <span>Solar Panel Analysis</span>
-          </button>
-          <button className="border border-white hover:bg-white hover:text-blue-900 text-white font-semibold px-6 py-3 rounded-lg transition">
-            <span>Equipment Monitoring</span>
-          </button>
-          <button className="border border-white hover:bg-white hover:text-blue-900 text-white font-semibold px-6 py-3 rounded-lg transition">
-            <span>Power Line Inspection</span>
-          </button>
-        </div>
+        
       </section>
       <Industries />
       <CTA />

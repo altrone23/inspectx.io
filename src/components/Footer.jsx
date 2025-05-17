@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Company Info */}
         <div>
-          <h3 className="font-bold text-xl mb-4">INSPECTX Pro</h3>
+          <h3 className="font-bold text-xl mb-4">INSPECTX</h3>
           <p className="text-gray-300 mb-4">
             Revolutionizing industrial inspections with AI-powered technology.
           </p>

@@ -4,8 +4,8 @@ import React from 'react';
 const industries = [
   "Manufacturing",
   "Energy & Utilities",
-  "Infrastructure",
-  "Logistics",
+  "RTA & Signal Tracking",
+  "Metro & Railways",
 ];
 
 const Industries = () => {

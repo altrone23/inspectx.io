@@ -1,5 +1,4 @@
 import React from 'react';
-import videoSrc from '../assets/vid1.mp4';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {

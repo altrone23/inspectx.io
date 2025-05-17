@@ -57,10 +57,10 @@ const Footer = () => {
         {/* Contact Info */}
         <div>
           <h3 className="font-bold text-lg mb-4">Contact Us</h3>
+          <p className="text-gray-300 font-semibold">INSPECTX AI SOLUTIONS LLP</p>
           <address className="not-italic text-gray-300">
-            <p>123 Tech Park Avenue</p>
-            <p>Sector 4, Bangalore</p>
-            <p>Karnataka – 560103, India</p>
+            <p>Plotno 8 12 13,flatno-106, Gayatrisai Nilayam, Nizampet</p>
+            <p>Hyderabad, Qutubullapur, Telangana, India, 500090</p>
             <p className="mt-3">support@inspectxpro.com</p>
             <p>+91 98765 43210</p>
           </address>

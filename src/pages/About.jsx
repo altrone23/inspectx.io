@@ -42,7 +42,7 @@ const About = () => {
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}
       >
-        <h1 className="text-4xl font-bold text-center mb-8">INSPECTX</h1>
+        <h1 className="text-4xl font-bold text-center mb-8">INSPECTX AI SOLUTIONS LLP</h1>
         
         <div className="space-y-6 text-gray-700">
           <p className="text-xl font-semibold">
@@ -95,6 +95,8 @@ const About = () => {
             Inspectx collaborates with Drone AI to extend our AI services globally. We also work 
             with AIVA for RCM services in the Indian and Middle East markets.
           </p>
+          
+         
         </div>
       </div>
     </section>

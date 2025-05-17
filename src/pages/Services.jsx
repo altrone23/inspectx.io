@@ -71,19 +71,19 @@ const services = [
       "Real-time data transmission and analytics"
     ]
   },
-  {
-    id: "custom-models",
-    icon: <FaSearch size={30} />,
-    title: "NDT Testing",
-    description: "Non-Destructive Testing services for medium to large scale process industries with comprehensive reporting and analysis.",
-    slides: [aiSlide1, aiSlide2, aiSlide3],
-    features: [
-      "Ultrasonic and radiographic testing",
-      "Magnetic particle and dye penetrant inspection",
-      "Automated defect classification using AI",
-      "Digital reporting and compliance documentation"
-    ]
-  },
+  // {
+  //   id: "custom-models",
+  //   icon: <FaSearch size={30} />,
+  //   title: "NDT Testing",
+  //   description: "Non-Destructive Testing services for medium to large scale process industries with comprehensive reporting and analysis.",
+  //   slides: [aiSlide1, aiSlide2, aiSlide3],
+  //   features: [
+  //     "Ultrasonic and radiographic testing",
+  //     "Magnetic particle and dye penetrant inspection",
+  //     "Automated defect classification using AI",
+  //     "Digital reporting and compliance documentation"
+  //   ]
+  // },
   {
     id: "power-inspection",
     icon: <FaBolt size={30} />,

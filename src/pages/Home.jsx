@@ -3,6 +3,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Industries from '../components/Industries';
 import CTA from '../components/CTA';
+import HomeSlideshow from '../components/HomeSlideshow';
 
 const Home = () => {
   return (
@@ -29,14 +30,11 @@ const Home = () => {
                 <a href="/services">📄 Learn More </a>
               </button>
             </div>
-          </div>
-
-          {/* Image / Graphic */}
+          </div>          {/* Slideshow Component */}
           <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-            <img
-              src={require('../assets/original.jpeg')}
-              alt="AI Inspection Illustration"
-              className="w-full max-w-md rounded-xl" />
+            <div className="w-full max-w-md h-80">
+              <HomeSlideshow />
+            </div>
           </div>
         </div>
         

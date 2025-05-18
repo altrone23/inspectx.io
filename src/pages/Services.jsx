@@ -1,6 +1,6 @@
 // src/pages/Services.jsx
 import React, { useState } from 'react';
-import { FaCamera, FaSearch, FaBolt, FaWater } from 'react-icons/fa';
+import { FaCamera,FaBolt, FaWater } from 'react-icons/fa';
 import { TbDrone, TbRotate360 } from 'react-icons/tb';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -16,8 +16,11 @@ import rcmSlide5 from '../assets/slides/RCM/5.png';
 import trackSlide1 from '../assets/slides/TRACKS/1.jpg';
 import trackSlide2 from '../assets/slides/TRACKS/2.jpg';
 import trackSlide3 from '../assets/slides/TRACKS/3.webp';
-import trackSlide4 from '../assets/slides/TRACKS/5.jpeg';
-import trackSlide5 from '../assets/slides/TRACKS/8.png';
+import trackSlide4 from '../assets/slides/TRACKS/4.webp';
+import trackSlide5 from '../assets/slides/TRACKS/5.webp';
+import trackSlide6 from '../assets/slides/TRACKS/6.png';
+import trackSlide7 from '../assets/slides/TRACKS/7.jpg';
+import trackSlide8 from '../assets/slides/TRACKS/11.webp';
 
 // Power line inspection slides
 import powerSlide1 from '../assets/slides/Power line/1.jpg';
@@ -40,9 +43,9 @@ import waterSlide3 from '../assets/slides/water/w3.jpg';
 import waterSlide4 from '../assets/slides/water/w4.jpg';
 
 // AI inspection slides
-import aiSlide1 from '../assets/slides/AI pics/AI pics/ai-generated-art-898.webp';
-import aiSlide2 from '../assets/slides/AI pics/AI pics/1706043993369.png';
-import aiSlide3 from '../assets/slides/AI pics/AI pics/istockphoto-1159763217-612x612.jpg';
+// import aiSlide1 from '../assets/slides/AI pics/AI pics/ai-generated-art-898.webp';
+// import aiSlide2 from '../assets/slides/AI pics/AI pics/1706043993369.png';
+// import aiSlide3 from '../assets/slides/AI pics/AI pics/istockphoto-1159763217-612x612.jpg';
 
 const services = [
   {
@@ -63,7 +66,7 @@ const services = [
     icon: <TbDrone size={30} />,
     title: "Railway Track Inspection",
     description: "Drone and AI-powered railway track inspection that ensures safety, reduces costs, and increases efficiency compared to traditional methods.",
-    slides: [trackSlide1, trackSlide2, trackSlide3, trackSlide4, trackSlide5],
+    slides: [trackSlide1, trackSlide2, trackSlide3, trackSlide4, trackSlide5,trackSlide6,trackSlide7,trackSlide8],
     features: [
       "High-definition and thermal imaging of track components",
       "LiDAR mapping for precise track geometry analysis",

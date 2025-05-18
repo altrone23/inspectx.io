@@ -4,7 +4,7 @@ import React from 'react';
 const industries = [
   "Manufacturing",
   "Energy & Utilities",
-  "RTA & Signal Tracking",
+  "RTA ",
   "Metro & Railways",
 ];
 

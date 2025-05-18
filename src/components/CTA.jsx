@@ -9,7 +9,7 @@ const CTA = () => {
           Ready to Revolutionize Your Inspections?
         </h2>
         <p className="mb-8 text-lg text-gray-300">
-          Let INSPECTX Pro bring intelligence and automation into your quality control process.
+          Let INSPECTX bring intelligence and automation into your quality control process.
         </p>
         <a
           href="#contact"

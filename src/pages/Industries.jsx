@@ -4,11 +4,11 @@ import React from 'react';
 const industries = [
   "Manufacturing",
   "Energy & Utilities",
-  "Infrastructure",
-  "Logistics",
+  "RTA ",
+  "Metro & Railways"
 ];
 
-const Industries = () => {
+function Industries() {
   return (
     <section className="bg-gray-100 py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
@@ -25,6 +25,6 @@ const Industries = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Industries;

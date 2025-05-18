@@ -1,6 +1,7 @@
 // src/pages/Services.jsx
 import React, { useState } from 'react';
-import { FaCamera,FaBolt, FaWater } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { FaCamera, FaBolt, FaWater } from 'react-icons/fa';
 import { TbDrone, TbRotate360 } from 'react-icons/tb';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -219,10 +220,14 @@ const Services = () => {
                   {service.features.map((feature, i) => (
                     <li key={i}>{feature}</li>
                   ))}
-                </ul>
-                <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all">
+                </ul>                <Link to={`/services/${service.id === "visual-ai" ? "reliability-condition-monitoring" : 
+                                service.id === "defect-detection" ? "railway-track-inspection" : 
+                                service.id === "power-inspection" ? "power-line-inspection" : 
+                                service.id === "thermal-imaging" ? "solar-panel-inspection" : 
+                                service.id === "analytics" ? "water-line-inspection" : ""}`} 
+                    className="mt-4 inline-block px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all">
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           ))}

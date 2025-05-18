@@ -8,6 +8,11 @@ import Services from './pages/Services';
 import About from './pages/About';
 import Features from './pages/Features';
 import Training from './pages/Training';
+import ReliabilityConditionMonitoring from './pages/ReliabilityConditionMonitoring';
+import RailwayTrackInspection from './pages/RailwayTrackInspection';
+import PowerLineInspection from './pages/PowerLineInspection';
+import SolarPanelInspection from './pages/SolarPanelInspection';
+import WaterLineInspection from './pages/WaterLineInspection';
 
 function App() {
   return (
@@ -20,6 +25,11 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/training" element={<Training />} />
+        <Route path="/services/reliability-condition-monitoring" element={<ReliabilityConditionMonitoring />} />
+        <Route path="/services/railway-track-inspection" element={<RailwayTrackInspection />} />
+        <Route path="/services/power-line-inspection" element={<PowerLineInspection />} />
+        <Route path="/services/solar-panel-inspection" element={<SolarPanelInspection />} />
+        <Route path="/services/water-line-inspection" element={<WaterLineInspection />} />
       </Routes>
       <Footer />
     </Router>

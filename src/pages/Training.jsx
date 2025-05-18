@@ -1,5 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaBook, FaChalkboardTeacher, FaTools, FaQuestionCircle } from 'react-icons/fa';
+
+// Import training images
+import trainingImage1 from '../assets/training/1.png';
+import trainingImage2 from '../assets/training/2.png';
+import trainingImage3 from '../assets/training/3.png';
 
 // Fallback component for missing images
 const FallbackImage = ({ alt }) => (
@@ -9,11 +15,12 @@ const FallbackImage = ({ alt }) => (
 );
 
 const trainingSections = [
-  {    id: 'cat1',
+  {
+    id: 'cat1',
     icon: <FaBook size={30} />,
     title: 'CAT1: Vibration Analysis',
     description: 'Foundational training for vibration analysis, covering the basics of vibration, data collection, and fault diagnosis.',
-    image: '../assets/training/1.png',
+    image: trainingImage1,
     features: [
       'Introduction to vibration principles',
       'Vibration data collection techniques',
@@ -21,11 +28,12 @@ const trainingSections = [
       'Hands-on practice with vibration tools'
     ]
   },
-  {    id: 'cat2',
+  {
+    id: 'cat2',
     icon: <FaChalkboardTeacher size={30} />,
     title: 'CAT2: Advanced Vibration Analysis',
     description: 'Intermediate to advanced concepts in vibration analysis, including signal processing, advanced diagnostics, and case studies.',
-    image: '../assets/training/2.png',
+    image: trainingImage2,
     features: [
       'Signal processing fundamentals',
       'Advanced fault diagnostics',
@@ -33,11 +41,12 @@ const trainingSections = [
       'Reporting and communication of findings'
     ]
   },
-  {    id: 'cat3',
+  {
+    id: 'cat3',
     icon: <FaTools size={30} />,
     title: 'CAT3: Reliability & Asset Management',
     description: 'Comprehensive training on reliability engineering, asset management, and predictive maintenance strategies.',
-    image: '../assets/training/3.png',
+    image: trainingImage3,
     features: [
       'Reliability-centered maintenance (RCM)',
       'Asset management best practices',
@@ -46,7 +55,7 @@ const trainingSections = [
     ]
   },
   {
-    id: 'filler',
+    id: 'other-courses',
     icon: <FaQuestionCircle size={30} />,
     title: 'Other Courses',
     description: 'Explore additional training programs including infrared thermography, field lubrication, turbomachinery, and more.',
@@ -75,18 +84,13 @@ const Training = () => (
             id={section.id}
             key={section.id}
             className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
-          >            <div className="w-full lg:w-1/2">
+          >
+            <div className="w-full lg:w-1/2">
               {section.image ? (
                 <img 
                   src={section.image} 
                   alt={section.title} 
                   className="rounded-xl w-full h-64 md:h-80 lg:h-96 object-cover"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.parentNode.appendChild(
-                      document.createElement('div')
-                    ).outerHTML = `<div class="flex items-center justify-center bg-gray-200 text-gray-400 rounded-xl w-full h-64 md:h-80 lg:h-96"><span class="text-2xl">No Image</span></div>`;
-                  }} 
                 />
               ) : (
                 <FallbackImage alt={section.title} />
@@ -103,9 +107,12 @@ const Training = () => (
                   <li key={i}>{feature}</li>
                 ))}
               </ul>
-              <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all">
+              <Link 
+                to={`/training/${section.id}`} 
+                className="mt-4 inline-block px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all"
+              >
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
         ))}

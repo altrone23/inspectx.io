@@ -1,11 +1,10 @@
-﻿// filepath: c:\Users\aubal\OneDrive\Desktop\inspectx.io\src\components\Industries.jsx
 // src/components/Industries.jsx
 import React, { useState } from 'react';
 
 const industries = [
   {
     name: "Manufacturing",
-    icon: "",
+    icon: "🏭",
     description: "AI-powered inspection solutions for manufacturing processes, enhancing quality control and reducing defects.",
     subIndustries: [
       { name: "Automobile Manufacturing", description: "Quality inspection of auto parts and assembly lines" },
@@ -14,10 +13,9 @@ const industries = [
       { name: "Paper Manufacturing", description: "Surface inspection and quality grading" },
       { name: "Electronics Manufacturing", description: "PCB and component inspection systems" }
     ]
-  },
-  {
+  },  {
     name: "Energy & Utilities",
-    icon: "",
+    icon: "⚡",
     description: "Advanced inspection technologies for energy infrastructure, ensuring reliability and safety.",
     subIndustries: [
       { name: "Power Plants", description: "Complete facility inspection and operational safety monitoring" },
@@ -26,10 +24,9 @@ const industries = [
       { name: "Solar Farms", description: "Panel efficiency and defect inspection" },
       { name: "Transmission Lines", description: "Overhead line and tower inspection" }
     ]
-  },
-  {
+  },  {
     name: "Metro & Railways",
-    icon: "",
+    icon: "🚆",
     description: "Comprehensive track and infrastructure inspection solutions for safe and efficient operations.",
     subIndustries: [
       { name: "Track Inspection", description: "Advanced defect detection and measurement of railway tracks" },
@@ -41,7 +38,7 @@ const industries = [
   },
   {
     name: "Water Management",
-    icon: "",
+    icon: "💧",
     description: "Monitoring and inspection systems for water infrastructure and quality control.",
     subIndustries: [
       { name: "Municipal Water", description: "Distribution network monitoring" },
@@ -68,45 +65,44 @@ const Industries = () => {
     <section className="bg-gray-100 py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6">Industries We Serve</h2>
-        <p className="mb-10 text-gray-600">Custom AI inspection solutions for diverse industrial domains, tailored to specific industry requirements.</p>
-        
-        <div className="grid grid-cols-1 gap-8">
-          {industries.map((industry, i) => (
-            <div key={i} className="bg-white shadow-lg rounded-xl overflow-hidden transition-all duration-300">
-              <div 
-                className={`p-6 cursor-pointer ${expandedIndustry === i ? 'bg-blue-600 text-white' : 'hover:bg-blue-50'}`}
-                onClick={() => toggleExpand(i)}
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-semibold flex items-center">
-                    <span className="mr-3 text-3xl">{industry.icon}</span> 
-                    {industry.name}
-                  </h3>
-                  <svg 
-                    className={`w-6 h-6 transition-transform ${expandedIndustry === i ? 'transform rotate-180' : ''}`} 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-                <p className={`mt-2 ${expandedIndustry === i ? 'text-blue-100' : 'text-gray-600'}`}>{industry.description}</p>
-              </div>
-
-              {expandedIndustry === i && (
-                <div className="p-6 bg-gray-50 border-t border-gray-200">
-                  <h4 className="text-lg font-semibold mb-4 text-blue-700">Sub-Industries:</h4>
-                  <div className="space-y-4">
-                    {industry.subIndustries.map((subIndustry, j) => (
-                      <div key={j} className="p-4 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
-                        <h5 className="font-semibold text-gray-800">{subIndustry.name}</h5>
-                        <p className="text-gray-600 mt-1">{subIndustry.description}</p>
-                      </div>
-                    ))}
+        <p className="mb-10 text-gray-600">Custom AI inspection solutions for diverse industrial domains, tailored to specific industry requirements.</p>        <div className="flex flex-wrap">
+          {industries.map((industry, i) => (            <div key={i} className={`w-full md:w-1/2 px-4 mb-8 ${expandedIndustry === i ? 'md:w-full' : ''}`}>
+              <div className="bg-white shadow-lg rounded-xl overflow-hidden transition-all duration-300">
+                <div 
+                  className={`p-6 cursor-pointer ${expandedIndustry === i ? 'bg-blue-600 text-white' : 'hover:bg-blue-50'}`}
+                  onClick={() => toggleExpand(i)}
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-2xl font-semibold flex items-center">
+                      <span className="mr-3 text-3xl">{industry.icon}</span> 
+                      {industry.name}
+                    </h3>
+                    <svg 
+                      className={`w-6 h-6 transition-transform ${expandedIndustry === i ? 'transform rotate-180' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
                   </div>
+                  <p className={`mt-2 ${expandedIndustry === i ? 'text-blue-100' : 'text-gray-600'}`}>{industry.description}</p>
                 </div>
-              )}
+
+                {expandedIndustry === i && (
+                  <div className="p-6 bg-gray-50 border-t border-gray-200">
+                    <h4 className="text-lg font-semibold mb-4 text-blue-700">Sub-Industries:</h4>
+                    <div className="space-y-4">
+                      {industry.subIndustries.map((subIndustry, j) => (
+                        <div key={j} className="p-4 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+                          <h5 className="font-semibold text-gray-800">{subIndustry.name}</h5>
+                          <p className="text-gray-600 mt-1">{subIndustry.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>

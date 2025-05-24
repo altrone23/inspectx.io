@@ -1,8 +1,9 @@
 // src/pages/PowerLineInspection.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaBolt } from 'react-icons/fa';
+import ServiceDemoRequest from '../components/ServiceDemoRequest';
 
 // Import power line inspection slides for the full gallery
 import powerSlide1 from '../assets/slides/Power line/1.jpg';
@@ -15,6 +16,16 @@ import powerSlide7 from '../assets/slides/Power line/7.jpg';
 import powerSlide8 from '../assets/slides/Power line/power-line-inspection-drone.webp';
 
 const PowerLineInspection = () => {
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
+  
+  const openDemoForm = () => {
+    setIsDemoFormOpen(true);
+  };
+
+  const closeDemoForm = () => {
+    setIsDemoFormOpen(false);
+  };
+
   return (
     <section id="top" className="py-16 px-6 bg-white text-gray-800">
       <div className="max-w-5xl mx-auto">
@@ -88,21 +99,13 @@ const PowerLineInspection = () => {
                 />
               </div>
             ))}
-          </div>
-
-          <div className="mt-10 bg-gray-100 p-6 rounded-xl">
-            <h2 className="text-2xl font-semibold mb-4">Request a Consultation</h2>
-            <p className="mb-4">
-              Learn how our power line inspection services can improve your utility's reliability, safety, and operational efficiency.
-              Contact us to discuss your specific inspection needs.
-            </p>
-            <Link 
-              to="/contact" 
-              className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-all"
-            >
-              Contact Us
-            </Link>
-          </div>
+          </div>          <ServiceDemoRequest
+            serviceName="Power Line Inspection"
+            serviceId="power-inspection"
+            isDemoFormOpen={isDemoFormOpen}
+            openDemoForm={openDemoForm}
+            closeDemoForm={closeDemoForm}
+          />
         </div>
       </div>
     </section>

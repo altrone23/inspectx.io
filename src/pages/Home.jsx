@@ -1,11 +1,22 @@
 // src/pages/Home.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import Hero from '../components/Hero';
 import Industries from '../components/Industries';
 import CTA from '../components/CTA';
 import HomeSlideshow from '../components/HomeSlideshow';
+import RequestDemoForm from '../components/RequestDemoForm';
 
 const Home = () => {
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
+
+  const openDemoForm = () => {
+    setIsDemoFormOpen(true);
+  };
+
+  const closeDemoForm = () => {
+    setIsDemoFormOpen(false);
+  };
+
   return (
     <>
       <div id="top">
@@ -22,20 +33,26 @@ const Home = () => {
               INSPECTX simplifies and accelerates inspections with real-time analytics,
               automation, and customizable workflows for all industries.
             </p>            <div className="flex flex-col sm:flex-row gap-4 mt-4">
-              <button className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-lg transition">
-                <a href="/contact">🚀 Request a Demo</a>
+              <button 
+                className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-lg transition"
+                onClick={openDemoForm}
+              >
+                🚀 Request a Demo
               </button>
               <button className="border border-white hover:bg-white hover:text-blue-900 text-white font-semibold px-6 py-3 rounded-lg transition">
                 <a href="/services">📄 Learn More </a>
-              </button>
-            </div>
-          </div>          {/* Slideshow Component */}
+              </button>            </div>
+          </div>          
+          {/* Slideshow Component */}
           <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
             <div className="w-full max-w-md h-80">
               <HomeSlideshow />
             </div>
           </div>
         </div>
+        
+        {/* Demo Request Form */}
+        <RequestDemoForm isOpen={isDemoFormOpen} onClose={closeDemoForm} />
         
         {/* Service tags added here */}
         

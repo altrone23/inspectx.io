@@ -1,8 +1,9 @@
 // src/pages/RailwayTrackInspection.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { TbDrone } from 'react-icons/tb';
+import ServiceDemoRequest from '../components/ServiceDemoRequest';
 
 // Import track inspection slides for the full gallery
 import trackSlide1 from '../assets/slides/TRACKS/1.jpg';
@@ -15,6 +16,16 @@ import trackSlide7 from '../assets/slides/TRACKS/7.jpg';
 import trackSlide8 from '../assets/slides/TRACKS/11.webp';
 
 const RailwayTrackInspection = () => {
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
+  
+  const openDemoForm = () => {
+    setIsDemoFormOpen(true);
+  };
+
+  const closeDemoForm = () => {
+    setIsDemoFormOpen(false);
+  };
+  
   return (
     <section id="top" className="py-16 px-6 bg-white text-gray-800">
       <div className="max-w-5xl mx-auto">
@@ -96,21 +107,13 @@ const RailwayTrackInspection = () => {
                 />
               </div>
             ))}
-          </div>
-
-          <div className="mt-10 bg-gray-100 p-6 rounded-xl">
-            <h2 className="text-2xl font-semibold mb-4">Request a Demonstration</h2>
-            <p className="mb-4">
-              See how our drone-based railway track inspection technology can revolutionize your maintenance operations.
-              Contact us to schedule a demonstration or discuss your specific requirements.
-            </p>
-            <Link 
-              to="/contact" 
-              className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-all"
-            >
-              Contact Us
-            </Link>
-          </div>
+          </div>          <ServiceDemoRequest
+            serviceName="Railway Track Inspection"
+            serviceId="defect-detection"
+            isDemoFormOpen={isDemoFormOpen}
+            openDemoForm={openDemoForm}
+            closeDemoForm={closeDemoForm}
+          />
         </div>
       </div>
     </section>

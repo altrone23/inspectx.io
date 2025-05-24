@@ -1,8 +1,9 @@
 // src/pages/SolarPanelInspection.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCamera } from 'react-icons/fa';
+import ServiceDemoRequest from '../components/ServiceDemoRequest';
 
 // Import solar panel inspection slides for the full gallery
 import solarSlide1 from '../assets/slides/solar/s1.jpg';
@@ -12,6 +13,16 @@ import solarSlide4 from '../assets/slides/solar/s4.jpeg';
 import solarSlide5 from '../assets/slides/solar/s5.jpg';
 
 const SolarPanelInspection = () => {
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
+  
+  const openDemoForm = () => {
+    setIsDemoFormOpen(true);
+  };
+
+  const closeDemoForm = () => {
+    setIsDemoFormOpen(false);
+  };
+  
   return (
     <section id="top" className="py-16 px-6 bg-white text-gray-800">
       <div className="max-w-5xl mx-auto">
@@ -98,21 +109,13 @@ const SolarPanelInspection = () => {
                 />
               </div>
             ))}
-          </div>
-
-          <div className="mt-10 bg-gray-100 p-6 rounded-xl">
-            <h2 className="text-2xl font-semibold mb-4">Request a Demonstration</h2>
-            <p className="mb-4">
-              See the efficiency gains possible with our advanced solar panel inspection services. Whether you operate a residential installation or a utility-scale solar farm,
-              our scalable solutions can help you maximize performance. Contact us today to discuss your needs.
-            </p>
-            <Link 
-              to="/contact" 
-              className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-all"
-            >
-              Contact Us
-            </Link>
-          </div>
+          </div>          <ServiceDemoRequest
+            serviceName="Solar Panel Inspection"
+            serviceId="thermal-imaging"
+            isDemoFormOpen={isDemoFormOpen}
+            openDemoForm={openDemoForm}
+            closeDemoForm={closeDemoForm}
+          />
         </div>
       </div>
     </section>

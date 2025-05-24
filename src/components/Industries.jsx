@@ -4,7 +4,6 @@ import React from 'react';
 const industries = [
   "Manufacturing",
   "Energy & Utilities",
-  "RTA ",
   "Metro & Railways",
 ];
 
@@ -15,7 +14,7 @@ const Industries = () => {
         <h2 className="text-4xl font-bold mb-6">Industries We Serve</h2>
         <p className="mb-10 text-gray-600">Custom AI inspection solutions for diverse industrial domains.</p>
 
-        <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
           {industries.map((industry, i) => (
             <div key={i} className="bg-white shadow-md p-6 rounded-xl hover:bg-blue-50 transition">
               <h3 className="text-xl font-semibold">{industry}</h3>

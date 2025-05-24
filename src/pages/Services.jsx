@@ -51,7 +51,13 @@ import waterSlide4 from '../assets/slides/water/w4.jpg';
 const services = [
   {
     id: "visual-ai",
-    icon: <TbRotate360 size={30} />,
+    icon: (
+      <img
+        src={rcmSlide5}
+        alt="RCM Icon"
+        style={{ width: 30, height: 30, borderRadius: "50%", objectFit: "cover" }}
+      />
+    ),
     title: "Reliability Condition Monitoring (RCM)",
     description: "Advanced monitoring of rotating equipment like motors, pumps, turbines, and compressors to detect potential failures early and optimize maintenance.",
     slides: [rcmSlide1, rcmSlide2, rcmSlide3, rcmSlide4, rcmSlide5],

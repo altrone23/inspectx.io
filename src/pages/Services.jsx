@@ -34,8 +34,8 @@ import powerSlide5 from '../assets/slides/Power line/6.jpg';
 import solarSlide1 from '../assets/slides/solar/s1.jpg';
 import solarSlide2 from '../assets/slides/solar/s2.jpg';
 import solarSlide3 from '../assets/slides/solar/s3.jpg';
-import solarSlide4 from '../assets/slides/solar/s4.jpeg';
-import solarSlide5 from '../assets/slides/solar/s5.jpg';
+import solarSlide4 from '../assets/slides/solar/2.webp';
+import solarSlide5 from '../assets/slides/solar/3.webp';
 
 // Water line inspection slides
 import waterSlide1 from '../assets/slides/water/w1.jpg';

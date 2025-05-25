@@ -145,7 +145,7 @@ const About = () => {
               />
               <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-gray-900/90 to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Ashok Yarlagadda</h3>
+                  <h3 className="text-2xl font-bold mb-2">Ashook Yarlagadda</h3>
                   <p className="text-lg font-semibold mb-2">Co-Founder & COO</p>
                   <p className="text-sm opacity-90">
                     Leading operations and business development at INSPECTX with expertise in industrial automation and quality control.

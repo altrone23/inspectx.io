@@ -135,41 +135,40 @@ const About = () => {
               <p>AI can analyze data from sensors and machinery to predict potential failures, allowing for proactive maintenance and reducing downtime.</p>
             </div>
           </div>
-            <h2 className="text-2xl font-bold text-blue-800 mt-8 mb-6 hover:text-blue-600 transition-colors duration-300">Our Leadership</h2>
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Founder 1 */}
+            <h2 className="text-2xl font-bold text-blue-800 mt-8 mb-6 hover:text-blue-600 transition-colors duration-300">Our Leadership</h2>          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Founder 1 - Ashok */}
             <div className="relative group rounded-xl overflow-hidden shadow-lg">
               <img 
-                src={require('../assets/founder/ajay.jpg')} 
-                alt="Ajay" 
+                src={require('../assets/founder/ashok.jpg')} 
+                alt="Ashok Yarlagadda" 
                 className="w-full h-[400px] object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-gray-900/90 to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Ajay Kumar</h3>
-                  <p className="text-lg font-semibold mb-2">Co-Founder & CEO</p>
+                  <h3 className="text-2xl font-bold mb-2">Ashok Yarlagadda</h3>
+                  <p className="text-lg font-semibold mb-2">Co-Founder & COO</p>
                   <p className="text-sm opacity-90">
-                    Leading INSPECTX's vision and strategy with years of experience in AI and industrial automation.
-                    Specializes in developing cutting-edge inspection solutions for complex industrial applications.
+                    Leading operations and business development at INSPECTX with expertise in industrial automation and quality control.
+                    Drives operational excellence and strategic partnerships for sustainable growth.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Founder 2 */}
+            {/* Founder 2 - Ajay */}
             <div className="relative group rounded-xl overflow-hidden shadow-lg">
               <img 
-                src={require('../assets/founder/ashok.jpg')} 
-                alt="Ashok" 
+                src={require('../assets/founder/ajay.jpg')} 
+                alt="Ajay Bhaskaran" 
                 className="w-full h-[400px] object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-gray-900/90 to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Ashok Kumar</h3>
-                  <p className="text-lg font-semibold mb-2">Co-Founder & COO</p>
+                  <h3 className="text-2xl font-bold mb-2">Ajay Bhaskaran</h3>
+                  <p className="text-lg font-semibold mb-2">Co-Founder & CEO</p>
                   <p className="text-sm opacity-90">
-                    Driving technological innovation at INSPECTX with expertise in computer vision and deep learning.
-                    Leads the development of our AI-powered inspection platforms and automated solutions.
+                    Leading INSPECTX's vision and strategy with deep expertise in AI and industrial automation.
+                    Pioneering innovative inspection solutions for complex industrial challenges.
                   </p>
                 </div>
               </div>

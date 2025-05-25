@@ -8,8 +8,9 @@ import home2 from '../assets/home/2.jpeg';
 import home3 from '../assets/home/4.jpg';
 import home4 from '../assets/home/7.jpg';
 import home5 from '../assets/home/w3.jpg';
+import home6 from '../assets/home/2.webp';
 
-const homeImages = [home1, home2, home3, home4, home5];
+const homeImages = [home1, home2, home3, home4, home5, home6];
 
 const HomeSlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

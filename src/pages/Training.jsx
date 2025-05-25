@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaBook, FaChalkboardTeacher, FaTools, FaQuestionCircle } from 'react-icons/fa';
 
-// Import training images
-import trainingImage1 from '../assets/training/1.png';
-import trainingImage2 from '../assets/training/2.png';
-import trainingImage3 from '../assets/training/3.png';
+// // Import training images
+// import trainingImage1 from '../assets/training/1.png';
+// import trainingImage2 from '../assets/training/2.png';
+// import trainingImage3 from '../assets/training/3.png';
 
 // Fallback component for missing images
 const FallbackImage = ({ alt }) => (
@@ -18,9 +18,9 @@ const trainingSections = [
   {
     id: 'cat1',
     icon: <FaBook size={30} />,
-    title: 'CAT1: Vibration Analysis',
+    title: 'CAT1',
     description: 'Foundational training for vibration analysis, covering the basics of vibration, data collection, and fault diagnosis.',
-    image: trainingImage1,
+    // image: trainingImage1,
     features: [
       'Introduction to vibration principles',
       'Vibration data collection techniques',
@@ -31,9 +31,9 @@ const trainingSections = [
   {
     id: 'cat2',
     icon: <FaChalkboardTeacher size={30} />,
-    title: 'CAT2: Advanced Vibration Analysis',
+    title: 'CAT2',
     description: 'Intermediate to advanced concepts in vibration analysis, including signal processing, advanced diagnostics, and case studies.',
-    image: trainingImage2,
+    // image: trainingImage2,
     features: [
       'Signal processing fundamentals',
       'Advanced fault diagnostics',
@@ -44,9 +44,9 @@ const trainingSections = [
   {
     id: 'cat3',
     icon: <FaTools size={30} />,
-    title: 'CAT3: Reliability & Asset Management',
+    title: 'CAT3',
     description: 'Comprehensive training on reliability engineering, asset management, and predictive maintenance strategies.',
-    image: trainingImage3,
+    // image: trainingImage3,
     features: [
       'Reliability-centered maintenance (RCM)',
       'Asset management best practices',
@@ -55,9 +55,9 @@ const trainingSections = [
     ]
   },
   {
-    id: 'other-courses',
+    id: ' CAT4',
     icon: <FaQuestionCircle size={30} />,
-    title: 'Other Courses',
+    title: 'CAT 4',
     description: 'Explore additional training programs including infrared thermography, field lubrication, turbomachinery, and more.',
     image: null,
     features: [

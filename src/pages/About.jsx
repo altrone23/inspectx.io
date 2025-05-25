@@ -166,7 +166,7 @@ const About = () => {
               <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-gray-900/90 to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <h3 className="text-2xl font-bold mb-2">Ashok Kumar</h3>
-                  <p className="text-lg font-semibold mb-2">Co-Founder & CTO</p>
+                  <p className="text-lg font-semibold mb-2">Co-Founder & COO</p>
                   <p className="text-sm opacity-90">
                     Driving technological innovation at INSPECTX with expertise in computer vision and deep learning.
                     Leads the development of our AI-powered inspection platforms and automated solutions.

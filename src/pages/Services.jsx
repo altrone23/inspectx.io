@@ -59,7 +59,7 @@ const services = [
     ),
     title: "Reliability Condition Monitoring (RCM)",
     description: "Advanced monitoring of rotating equipment like motors, pumps, turbines, and compressors to detect potential failures early and optimize maintenance.",
-    slides: [rcmSlide1, rcmSlide2, rcmSlide3, rcmSlide4, rcmSlide5],
+    slides: [rcmSlide1, rcmSlide2, rcmSlide3, rcmSlide4],
     features: [
       "Vibration analysis for early bearing failure detection",
       "Oil and lubricant quality assessment",

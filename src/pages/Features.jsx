@@ -52,7 +52,7 @@ const Features = () => {
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-800 mb-4">Powerful Features</h2>
         <p className="text-lg text-gray-600 mb-12">
-          Everything you need to streamline your inspection process — all in one intelligent platform.
+          Everything you need to streamline your inspection process — all in one Artificial intelligent platform.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {features.map((feature, index) => (

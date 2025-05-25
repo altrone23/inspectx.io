@@ -62,7 +62,7 @@ const Contact = () => {
       <h1 className="text-4xl font-bold text-center mb-8">Contact Us</h1>
         <div className="bg-white shadow-md p-6 rounded-xl space-y-4">
         <p><span className="font-semibold">📍 Address:</span> Plot No. 8, 12, 13, Flat No. 106, Gayatrisai Nilayam, Nizampet, Hyderabad, Qutubullapur, Telangana, India – 500090</p>
-        <p><span className="font-semibold">📞 Phone:</span> +91 7550124365</p>
+        <p><span className="font-semibold">📞 Phone:</span> +91 75501 24365</p>
         <p><span className="font-semibold">📧 Email:</span> support@inspectxpro.com</p>
         <p><span className="font-semibold">🕒 Business Hours:</span> Mon – Fri: 9:00 AM – 6:00 PM IST</p>
       </div>

@@ -62,7 +62,7 @@ const Footer = () => {
             <p>Plotno 8 12 13,flatno-106, Gayatrisai Nilayam, Nizampet</p>
             <p>Hyderabad, Qutubullapur, Telangana, India, 500090</p>
             <p className="mt-3">support@inspectx.com</p>
-            <p>+91 98765 43210</p>
+            <p>+91 75501 24365</p>
           </address>
         </div>
       </div>

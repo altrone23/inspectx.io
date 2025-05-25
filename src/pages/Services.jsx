@@ -19,7 +19,6 @@ import trackSlide2 from '../assets/slides/TRACKS/2.jpg';
 import trackSlide3 from '../assets/slides/TRACKS/3.webp';
 import trackSlide4 from '../assets/slides/TRACKS/4.webp';
 import trackSlide5 from '../assets/slides/TRACKS/5.webp';
-import trackSlide6 from '../assets/slides/TRACKS/6.png';
 import trackSlide7 from '../assets/slides/TRACKS/7.jpg';
 import trackSlide8 from '../assets/slides/TRACKS/11.webp';
 
@@ -73,7 +72,7 @@ const services = [
     icon: <TbDrone size={30} />,
     title: "Railway Track Inspection",
     description: "Drone and AI-powered railway track inspection that ensures safety, reduces costs, and increases efficiency compared to traditional methods.",
-    slides: [trackSlide1, trackSlide2, trackSlide3, trackSlide4, trackSlide5,trackSlide6,trackSlide7,trackSlide8],
+    slides: [trackSlide1, trackSlide2, trackSlide3, trackSlide4, trackSlide5,trackSlide7,trackSlide8],
     features: [
       "High-definition and thermal imaging of track components",
       "LiDAR mapping for precise track geometry analysis",

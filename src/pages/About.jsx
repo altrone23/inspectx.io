@@ -149,7 +149,7 @@ const About = () => {
                   <h3 className="text-2xl font-bold mb-2">Ajay Kumar</h3>
                   <p className="text-lg font-semibold mb-2">Co-Founder & CEO</p>
                   <p className="text-sm opacity-90">
-                    Leading INSPECTX's vision and strategy with over 10 years of experience in AI and industrial automation.
+                    Leading INSPECTX's vision and strategy with years of experience in AI and industrial automation.
                     Specializes in developing cutting-edge inspection solutions for complex industrial applications.
                   </p>
                 </div>

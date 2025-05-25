@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaBook, FaChalkboardTeacher, FaTools, FaQuestionCircle } from 'react-icons/fa';
+import { FaBook, FaChalkboardTeacher, FaTools, FaDownload } from 'react-icons/fa';
+import trainingBrochure from '../assets/pdf/AIVA_RCM_Training_Brochure_v2.8_LR.pdf';
 
 // // Import training images
 // import trainingImage1 from '../assets/training/1.png';
@@ -56,7 +56,7 @@ const trainingSections = [
   },
   {
     id: ' CAT4',
-    icon: <FaQuestionCircle size={30} />,
+    icon: <FaTools size={30} />,
     title: 'CAT 4',
     description: 'Explore additional training programs including infrared thermography, field lubrication, turbomachinery, and more.',
     image: null,
@@ -106,13 +106,14 @@ const Training = () => (
                 {section.features.map((feature, i) => (
                   <li key={i}>{feature}</li>
                 ))}
-              </ul>
-              <Link 
-                to={`/training/${section.id}`} 
-                className="mt-4 inline-block px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all"
+              </ul>              <a 
+                href={trainingBrochure}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all"
               >
-                Learn More
-              </Link>
+                View Brochure <FaDownload size={16} />
+              </a>
             </div>
           </div>
         ))}

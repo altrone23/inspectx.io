@@ -44,7 +44,7 @@ const Navbar = () => {
       />
       <div className="max-w-9xl mx-auto px-5 py-4 flex justify-between items-center" style={{ position: 'relative', zIndex: 2 }}>
         <div className="max-w-7xl mx-auto px-5 py-3 contents justify-left items-left">
-          <img src="/logo.jpg" alt="Header" style={{ width: '200px', height: '60px' }} />
+          <img src="/logo.png" alt="Header" style={{ width: '200px', height: '60px' }} />
         </div>
         <div className="space-x-6 text-lg font-semibold text-gray-200">
           <Link to="/" className="hover:text-blue-100 px-4 py-2 text-white">Home</Link>

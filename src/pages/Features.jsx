@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ShieldCheck, CalendarCheck, FileText, BellRing, Users, Settings, BarChart2 } from 'lucide-react';
 
 const features = [
@@ -53,14 +54,35 @@ const Features = () => {
         <h2 className="text-4xl font-bold text-gray-800 mb-4">Powerful Features</h2>
         <p className="text-lg text-gray-600 mb-12">
           Everything you need to streamline your inspection process — all in one Artificial intelligent platform.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        </p>        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition-all">
-              <div className="mb-4">{feature.icon}</div>
+            <motion.div
+              key={index}
+              className="bg-white shadow-md rounded-2xl p-6 cursor-pointer"
+              initial={{ scale: 1 }}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                y: -10
+              }}
+              transition={{ 
+                type: "spring",
+                stiffness: 400,
+                damping: 17
+              }}
+            >
+              <motion.div 
+                className="mb-4"
+                whileHover={{ 
+                  rotate: [0, -10, 10, -10, 0],
+                  transition: { duration: 0.5 }
+                }}
+              >
+                {feature.icon}
+              </motion.div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

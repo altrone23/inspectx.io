@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import RequestDemoForm from './RequestDemoForm';
 
 // Import AI image for background
 import aiBackground from '../assets/ai.jpg';
 
 const Hero = () => {
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
+
+  const openDemoForm = () => setIsDemoFormOpen(true);
+  const closeDemoForm = () => setIsDemoFormOpen(false);
+
   return (
     <section className="relative h-screen flex flex-col justify-center items-center text-center text-white overflow-hidden">
       {/* Image background with overlay */}
@@ -20,10 +26,21 @@ const Hero = () => {
       
       {/* Content */}
       <div className="z-10 px-4 max-w-4xl">
-        <h1 className="text-5xl md:text-6xl font-bold mb-4 ">
+        <h1 className="text-5xl md:text-6xl font-bold mb-8">
           AI-Powered <span className="text-blue-300">Inspection</span> Solutions
-        </h1><br />
-        <br />
+        </h1>
+        <motion.button
+          onClick={openDemoForm}
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg text-xl font-semibold hover:bg-blue-700 transition-colors duration-300"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Request a Demo
+        </motion.button>
+        <RequestDemoForm 
+          isOpen={isDemoFormOpen} 
+          onClose={closeDemoForm}
+        />
       </div>
     </section>
   );

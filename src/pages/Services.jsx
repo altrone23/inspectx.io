@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaCamera, FaBolt, FaWater } from 'react-icons/fa';
 import { TbDrone, TbRotate360 } from 'react-icons/tb';
 import { motion, AnimatePresence } from 'framer-motion';
+import RequestDemoForm from '../components/RequestDemoForm';
 
 // Import slides
 // RCM slides
@@ -190,6 +191,19 @@ const ServiceSlider = ({ slides }) => {
 };
 
 const Services = () => {
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState(null);
+
+  const openDemoForm = (serviceId) => {
+    setSelectedService(serviceId);
+    setIsDemoFormOpen(true);
+  };
+
+  const closeDemoForm = () => {
+    setIsDemoFormOpen(false);
+    setSelectedService(null);
+  };
+
   return (
     <section id="top" className="py-16 px-6 bg-white text-gray-800">
       <div className="max-w-7xl mx-auto">
@@ -198,9 +212,12 @@ const Services = () => {
           <p className="mb-6 text-lg text-gray-600 max-w-2xl mx-auto">
             AI-powered inspection solutions for industries that demand precision, reliability, and safety
           </p>
-        </div>
-
-        <div className="space-y-24">
+        </div>        <div className="space-y-24">
+          <RequestDemoForm 
+            isOpen={isDemoFormOpen}
+            onClose={closeDemoForm}
+            preselectedService={selectedService}
+          />
           {services.map((service, index) => (
             <div 
               id={service.id}
@@ -221,18 +238,26 @@ const Services = () => {
                   <h3 className="text-2xl font-bold">{service.title}</h3>
                 </div>
                 <p className="text-gray-600 text-lg leading-relaxed">{service.description}</p>
-                <ul className="list-disc pl-5 text-gray-600 space-y-2">
-                  {service.features.map((feature, i) => (
+                <ul className="list-disc pl-5 text-gray-600 space-y-2">                  {service.features.map((feature, i) => (
                     <li key={i}>{feature}</li>
                   ))}
-                </ul>                <Link to={`/services/${service.id === "visual-ai" ? "reliability-condition-monitoring" : 
+                </ul>
+                <div className="flex gap-4 mt-4">
+                  <Link to={`/services/${service.id === "visual-ai" ? "reliability-condition-monitoring" : 
                                 service.id === "defect-detection" ? "railway-track-inspection" : 
                                 service.id === "power-inspection" ? "power-line-inspection" : 
                                 service.id === "thermal-imaging" ? "solar-panel-inspection" : 
                                 service.id === "analytics" ? "water-line-inspection" : ""}`} 
-                    className="mt-4 inline-block px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all">
-                  Learn More
-                </Link>
+                    className="inline-block px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all">
+                    Learn More
+                  </Link>
+                  <button
+                    onClick={() => openDemoForm(service.id)}
+                    className="px-6 py-2 bg-yellow-400 text-black rounded-md hover:bg-yellow-300 transition-all font-semibold"
+                  >
+                    Request Demo
+                  </button>
+                </div>
               </div>
             </div>
           ))}

@@ -8,10 +8,10 @@ const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const stats = [
-    { icon: <FaGlobe className="w-8 h-8" />, number: "10+", label: "Countries Served" },
-    { icon: <FaIndustry className="w-8 h-8" />, number: "500+", label: "Inspections Completed" },
+    { icon: <FaGlobe className="w-8 h-8" />, number: "3+", label: "Countries Served" },
+    { icon: <FaIndustry className="w-8 h-8" />, number: "60+", label: "Inspections Completed" },
     { icon: <FaUsers className="w-8 h-8" />, number: "50+", label: "Team Members" },
-    { icon: <FaPlane className="w-8 h-8" />, number: "100+", label: "Active Drones" }
+    { icon: <FaPlane className="w-8 h-8" />, number: "6+", label: "Active Drones" }
   ];
 
   const milestones = [

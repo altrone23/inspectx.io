@@ -13,6 +13,10 @@ import RailwayTrackInspection from './pages/RailwayTrackInspection';
 import PowerLineInspection from './pages/PowerLineInspection';
 import SolarPanelInspection from './pages/SolarPanelInspection';
 import WaterLineInspection from './pages/WaterLineInspection';
+import LeadershipTeam from './pages/teams/LeadershipTeam';
+import TechnicalExperts from './pages/teams/TechnicalExperts';
+import Pilots from './pages/teams/Pilots';
+import SupportStaff from './pages/teams/SupportStaff';
 
 function App() {
   return (
@@ -30,6 +34,10 @@ function App() {
         <Route path="/services/power-line-inspection" element={<PowerLineInspection />} />
         <Route path="/services/solar-panel-inspection" element={<SolarPanelInspection />} />
         <Route path="/services/water-line-inspection" element={<WaterLineInspection />} />
+        <Route path="/teams/leadership" element={<LeadershipTeam />} />
+        <Route path="/teams/technical" element={<TechnicalExperts />} />
+        <Route path="/teams/pilots" element={<Pilots />} />
+        <Route path="/teams/support" element={<SupportStaff />} />
       </Routes>
       <Footer />
     </Router>

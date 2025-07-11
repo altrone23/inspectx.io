@@ -1,12 +1,13 @@
 // src/pages/About.jsx
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaUsers, FaPlane, FaGlobe, FaIndustry } from 'react-icons/fa';
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
+  const navigate = useNavigate();
   const stats = [
     { icon: <FaGlobe className="w-8 h-8" />, number: "3+", label: "Countries Served" },
     { icon: <FaIndustry className="w-8 h-8" />, number: "60+", label: "Inspections Completed" },
@@ -23,10 +24,21 @@ const About = () => {
 
   const team = [
     { name: "Leadership Team", description: "Experienced professionals from inspection and AI industries" },
-    { name: "Technical Experts", description: "Certified drone operators and AI specialists" },
-    { name: "R&D Team", description: "Innovators developing next-gen inspection solutions" },
+    { name: "Technical Experts", description: "Tech team and AI specialists" },
+    { name: "Pilots", description: "Innovators developing next-gen inspection solutions" },
     { name: "Support Staff", description: "Dedicated customer service and operations team" }
   ];
+
+  const handleTeamClick = (teamName) => {
+    // Navigate to team detail page with team name as parameter
+    const teamRoutes = {
+      "Leadership Team": "/teams/leadership",
+      "Technical Experts": "/teams/technical",
+      "Pilots": "/teams/pilots",
+      "Support Staff": "/teams/support"
+    };
+    navigate(teamRoutes[teamName]);
+  };
 
   const services = [
     'AI Programmed Solar Inspection',
@@ -175,15 +187,22 @@ const About = () => {
             {team.map((member, index) => (
               <motion.div
                 key={index}
-                className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-colors duration-300"
-                whileHover={{ scale: 1.05 }}
+                className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer hover:shadow-xl hover:shadow-blue-500/20 border border-transparent hover:border-blue-500/30"
+                whileHover={{ scale: 1.05, y: -5 }}
+                whileTap={{ scale: 0.98 }}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
+                onClick={() => handleTeamClick(member.name)}
               >
-                <h3 className="text-xl font-semibold mb-3 text-blue-400">{member.name}</h3>
-                <p className="text-gray-300 text-sm">{member.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-blue-400 group-hover:text-blue-300 transition-colors">
+                  {member.name}
+                </h3>
+                <p className="text-gray-300 text-sm mb-3">{member.description}</p>
+                <div className="text-blue-400 text-sm font-medium opacity-70 hover:opacity-100 transition-opacity">
+                  Click to learn more →
+                </div>
               </motion.div>
             ))}
           </div>

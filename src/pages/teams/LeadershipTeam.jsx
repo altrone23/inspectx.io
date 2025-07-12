@@ -16,11 +16,28 @@ const LeadershipTeam = () => {
       email: "ajay@inspectx.io"
     },
     {
-      name: "Ashok Sharma",
-      role: "CTO & Co-Founder", 
+      name: "Ashok Yarlagadda",
+      role: "Chief Operating Officer (COO) & Co-Founder",
       image: "/src/assets/founder/ashok.jpg",
-      bio: "Technology expert specializing in AI-powered inspection systems and drone operations.",
-      expertise: ["AI Development", "Drone Technology", "System Architecture"],
+      bio: `ASHOOK YARLAGADDA
+Chief Operating Officer (COO) & Co-Founder
+InspectX AI Solutions LLP
+
+Ashok Yarlagadda is the Chief Operating Officer and Co-Founder of InspectX AI Solutions LLP, where he leads operational strategy, organizational development, and business execution. With a strong background in scaling technology-driven service businesses, Ashok plays a critical role in aligning innovation with operational excellence to ensure sustainable growth and client satisfaction.
+
+As a co-founder, he has been instrumental in shaping InspectX’s mission to deliver intelligent inspection solutions through advanced AI, drone technologies, and data-driven analytics — particularly in infrastructure diagnostics and utility assessments.
+
+Ashok brings a hands-on leadership style to cross-functional operations, overseeing project execution, finance, talent development, and enterprise partnerships. His vision ensures InspectX operates with agility, scalability, and client-centric precision.`,
+      expertise: [
+        "Operational Strategy",
+        "Organizational Development",
+        "Business Execution",
+        "Scaling Tech Services",
+        "Project Management",
+        "Finance",
+        "Talent Development",
+        "Enterprise Partnerships"
+      ],
       linkedin: "#",
       email: "ashok@inspectx.io"
     }

@@ -14,7 +14,10 @@ const About = () => {
     { icon: <FaUsers className="w-8 h-8" />, number: "50+", label: "Team Members" },
     { icon: <FaPlane className="w-8 h-8" />, number: "6+", label: "Active Drones" }
   ];
-
+  // const partnerships =[
+  //   {name: "Drone AI", description: "Leading provider of drone technology solutions"},
+  //   {name: "Blue hat middle east", description: "Innovative AI solutions for industrial applications"},
+  // ];
   const milestones = [
     { year: "2024", title: "Foundation", description: "INSPECTX was established with a vision to revolutionize industrial inspections" },
     { year: "2024", title: "Strategic Partnerships", description: "Formed key partnerships with Drone AI and AIVA" },
@@ -148,6 +151,8 @@ const About = () => {
         </div>
       </section>
 
+      {/* ...Partnerships section removed... */}
+        
       {/* Timeline Section */}
       <section className="py-16 bg-gradient-to-r from-blue-900/30 to-purple-900/30">
         <div className="container mx-auto px-6">

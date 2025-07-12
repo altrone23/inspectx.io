@@ -57,6 +57,21 @@ const Home = () => {
         {/* Service tags added here */}
         
       </section>
+      {/* Partnerships Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-900/30 to-purple-900/30">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            Our Partnerships
+          </h2>
+          {/* Simple horizontal scroll for partner logos */}
+          <div className="w-full overflow-x-auto whitespace-nowrap flex items-center justify-center py-4 gap-8 scrollbar-hide">
+            {/* Add more logos as needed */}
+            <img src={require('../assets/partners/bluehat.jpg')} alt="Blue Hat Middle East" className="h-20 w-auto inline-block rounded shadow-lg mx-4 animate-slide" style={{animation: 'slide 10s linear infinite'}} />
+            {/* Example: <img src={require('../assets/partners/anotherlogo.jpg')} alt="Partner Name" className="h-20 w-auto inline-block rounded shadow-lg mx-4 animate-slide" /> */}
+          </div>
+          {/* Optionally add partner names/descriptions below if needed */}
+        </div>
+      </section>
       <Industries />
       <CTA />
     </>

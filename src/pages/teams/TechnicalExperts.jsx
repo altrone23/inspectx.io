@@ -2,42 +2,57 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaArrowLeft, FaCode, FaBrain, FaCog, FaRobot } from 'react-icons/fa';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const TechnicalExperts = () => {
   const experts = [
     {
-      name: "Dr. Priya Patel",
-      role: "Lead AI Engineer",
-      icon: <FaBrain className="w-8 h-8" />,
-      specialties: ["Machine Learning", "Computer Vision", "Neural Networks"],
-      experience: "8+ years in AI development",
-      achievements: ["Published 15+ research papers", "Led AI team at previous company", "Expert in TensorFlow & PyTorch"]
+      name: "Balavignesh A.U",
+      role: "AI & Data Science Engineer | Full Stack Developer",
+      image: require('../../assets/techteam/Bala.jpg'),
+      specialties: [
+        "Machine Learning",
+        "Computer Vision",
+        "Neural Networks",
+        "Full Stack Development",
+        "Data Analysis"
+      ],
+      experience:
+        "I’m a passionate AI & Data Science engineer with a strong foundation in both software development and intelligent systems. I love building powerful, scalable applications that solve real-world problems — combining deep learning models, clean code, and smart design.\n\nTechnical Skills:\nLanguages & Frameworks: Python, JavaScript, React, Node.js, Express\nAI/ML Tools: TensorFlow, PyTorch, Scikit-learn\nData Handling: Pandas, NumPy, SQL\nFull Stack: REST APIs, MongoDB, Firebase, TailwindCSS\nTools: Git, VS Code, Postman",
+      achievements: [
+        "Built and deployed full-stack apps integrating AI features",
+        "Worked on projects involving image recognition, NLP, and data pipelines",
+        "Completed internships and freelance work that involved real-world AI problem-solving",
+      ]
     },
     {
-      name: "Raj Mehta",
-      role: "Senior Software Engineer",
-      icon: <FaCode className="w-8 h-8" />,
-      specialties: ["Full-Stack Development", "Cloud Architecture", "DevOps"],
-      experience: "10+ years in software development",
-      achievements: ["AWS Certified Solutions Architect", "Built scalable inspection platforms", "Expert in React & Node.js"]
+      name: "Kavirajan.E",
+      role: "AI Engineer ,Developer & DevOps Engineer",
+      image: require('../../assets/techteam/kavirajan.jpg'),
+      specialties: ["Full-Stack Development", "Cloud Architecture", "DevOps","AI/ML Engineering"],
+      experience: "I’m a passionate AI & Data Science engineer with a strong foundation in both software development and intelligent systems. I love building powerful, scalable applications that solve real-world problems — combining deep learning models, clean code, and smart design. Technical Skills: Languages & Frameworks: Python, JavaScript, React, Node.js, Express AI/ML Tools: TensorFlow, PyTorch, Scikit-learn Data Handling: Pandas, NumPy, SQL Full Stack: REST APIs, MongoDB, Firebase, TailwindCSS Tools: Git, VS Code, Postman",
+      achievements: [
+        "Built and deployed full-stack apps integrating AI features",
+        "Worked on projects involving image recognition, NLP, and data pipelines",
+        "Completed internships and freelance work that involved real-world AI problem-solving",
+      ]
     },
-    {
-      name: "Sarah Johnson",
-      role: "Drone Systems Engineer",
-      icon: <FaCog className="w-8 h-8" />,
-      specialties: ["Drone Hardware", "Flight Control Systems", "Sensor Integration"],
-      experience: "6+ years in drone technology",
-      achievements: ["Certified drone pilot", "Hardware integration specialist", "Safety systems expert"]
-    },
-    {
-      name: "Dr. Ahmed Hassan",
-      role: "Computer Vision Specialist",
-      icon: <FaRobot className="w-8 h-8" />,
-      specialties: ["Image Processing", "Pattern Recognition", "3D Reconstruction"],
-      experience: "12+ years in computer vision",
-      achievements: ["PhD in Computer Vision", "20+ patents filed", "Industry recognition awards"]
-    }
+    // {
+    //   name: "Sarah Johnson",
+    //   role: "Drone Systems Engineer",
+    //   image: require('../../assets/techteam/sarah.jpg'),
+    //   specialties: ["Drone Hardware", "Flight Control Systems", "Sensor Integration"],
+    //   experience: "6+ years in drone technology",
+    //   achievements: ["Certified drone pilot", "Hardware integration specialist", "Safety systems expert"]
+    // },
+    // {
+    //   name: "Dr. Ahmed Hassan",
+    //   role: "Computer Vision Specialist",
+    //   image: require('../../assets/techteam/ahmed.jpg'),
+    //   specialties: ["Image Processing", "Pattern Recognition", "3D Reconstruction"],
+    //   experience: "12+ years in computer vision",
+    //   achievements: ["PhD in Computer Vision", "20+ patents filed", "Industry recognition awards"]
+    // }
   ];
 
   const technologies = [
@@ -89,8 +104,8 @@ const TechnicalExperts = () => {
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mr-4">
-                    {expert.icon}
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mr-4 overflow-hidden">
+                    <img src={expert.image} alt={expert.name} className="w-16 h-16 object-cover rounded-full border-2 border-white shadow" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-green-400">{expert.name}</h3>

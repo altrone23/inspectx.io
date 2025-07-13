@@ -9,16 +9,16 @@ const LeadershipTeam = () => {
     {
       name: "Ajay Kumar",
       role: "CEO & Founder",
-      image: "/src/assets/founder/ajay.jpg",
+      image: "src/assets/founder/ajay.jpg",
       bio: "Visionary leader with 15+ years in industrial inspection and AI technologies.",
       expertise: ["Strategic Planning", "Business Development", "Industry Relations"],
       linkedin: "#",
       email: "ajay@inspectx.io"
     },
     {
-      name: "Ashok Yarlagadda",
+      name: "Ashook Yarlagadda",
       role: "Chief Operating Officer (COO) & Co-Founder",
-      image: "/src/assets/founder/ashok.jpg",
+      image: "src/assets/founder/ashok.png",
       bio: `ASHOOK YARLAGADDA
 Chief Operating Officer (COO) & Co-Founder
 InspectX AI Solutions LLP
@@ -40,6 +40,23 @@ Ashok brings a hands-on leadership style to cross-functional operations, oversee
       ],
       linkedin: "#",
       email: "ashok@inspectx.io"
+    },
+    {
+      name: "Balu",
+      role: "Manger Services",
+      image: "src/assets/founder/balu.jpg",
+      bio: `Results-driven Mechanical Professional with 14 years of extensive experience in project execution, equipment maintenance, and specialized expertise in the theme park and amusement sector. Proven ability to manage and deliver complex projects under high-pressure environments with excellence. Adept in manpower management, client coordination, and cross-functional team leadership. Committed to delivering unmatched service quality and ensuring optimal operational efficiency.
+Vision: To exceed expectations by delivering unmatched quality and reliability in every project and service.`,
+      expertise: [
+        "Project Execution & Maintenance Expertise",
+        "High-Pressure Environment Adaptability",
+        "Skilled in Theme Park & Amusement Equipment",
+        "Strong Manpower & Resource Management",
+        "Effective Client Relationship Handling",
+        "Safety-First & Service-Oriented Mindset"
+      ],
+      linkedin: "#",
+      email: "balu@inspectx.io"
     }
   ];
 
@@ -86,10 +103,12 @@ Ashok brings a hands-on leadership style to cross-functional operations, oversee
                 transition={{ delay: index * 0.2 }}
               >
                 <div className="text-center mb-6">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 p-1">
-                    <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-4xl font-bold">
-                      {leader.name.split(' ').map(n => n[0]).join('')}
-                    </div>
+                  <div className="w-32 h-32 mx-auto mb-4 p-1 flex items-center justify-center">
+                    <img
+                      src={require(`../../assets/founder/${leader.name === 'Ajay Kumar' ? 'ajay.jpg' : leader.name === 'Ashook Yarlagadda' ? 'ashok.png' : 'balu.jpg'}`)}
+                      alt={leader.name}
+                      className="w-32 h-50 rounded-full object-cover border-4 border-white shadow-lg"
+                    />
                   </div>
                   <h3 className="text-2xl font-bold text-blue-400 mb-2">{leader.name}</h3>
                   <p className="text-purple-400 font-semibold">{leader.role}</p>

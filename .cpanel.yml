@@ -1,0 +1,9 @@
+ZA---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/username/public_html/
+    - export NODEJS_VERSION=18
+    - /bin/cp -R build/* $DEPLOYPATH
+    - /bin/cp build/index.html $DEPLOYPATH/index.html
+    - /bin/cp -R build/static $DEPLOYPATH/
+    - find $DEPLOYPATH -name "*.map" -delete

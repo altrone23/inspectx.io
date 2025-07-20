@@ -6,38 +6,38 @@ import { FaArrowLeft, FaHeadset, FaTools, FaShieldAlt, FaHandshake } from 'react
 
 const SupportStaff = () => {
   const supportTeam = [
-    {
-      name: "Anna Williams",
-      role: "Customer Success Manager",
-      icon: <FaHandshake className="w-8 h-8" />,
-      responsibilities: ["Client Relationship Management", "Project Coordination", "Success Strategy Planning"],
-      experience: "7+ years in customer success",
-      achievements: ["95% client retention rate", "Managed 50+ successful projects", "Customer satisfaction expert"]
-    },
-    {
-      name: "David Kumar",
-      role: "Technical Support Lead",
-      icon: <FaHeadset className="w-8 h-8" />,
-      responsibilities: ["24/7 Technical Support", "Issue Resolution", "Client Training"],
-      experience: "5+ years in technical support",
-      achievements: ["Average response time: <30 minutes", "99.5% issue resolution rate", "Expert troubleshooter"]
-    },
-    {
-      name: "Maria Gonzalez",
-      role: "Operations Coordinator",
-      icon: <FaTools className="w-8 h-8" />,
-      responsibilities: ["Project Scheduling", "Resource Management", "Quality Assurance"],
-      experience: "6+ years in operations management",
-      achievements: ["Streamlined operations efficiency by 40%", "Zero missed deadlines in 2024", "Process optimization specialist"]
-    },
-    {
-      name: "Robert Chen",
-      role: "Safety & Compliance Officer",
-      icon: <FaShieldAlt className="w-8 h-8" />,
-      responsibilities: ["Safety Protocol Development", "Regulatory Compliance", "Risk Management"],
-      experience: "10+ years in industrial safety",
-      achievements: ["Zero safety incidents", "100% regulatory compliance", "Certified safety professional"]
-    }
+    // {
+    //   name: "Anna Williams",
+    //   role: "Customer Success Manager",
+    //   icon: <FaHandshake className="w-8 h-8" />,
+    //   responsibilities: ["Client Relationship Management", "Project Coordination", "Success Strategy Planning"],
+    //   experience: "7+ years in customer success",
+    //   achievements: ["95% client retention rate", "Managed 50+ successful projects", "Customer satisfaction expert"]
+    // },
+    // {
+    //   name: "David Kumar",
+    //   role: "Technical Support Lead",
+    //   icon: <FaHeadset className="w-8 h-8" />,
+    //   responsibilities: ["24/7 Technical Support", "Issue Resolution", "Client Training"],
+    //   experience: "5+ years in technical support",
+    //   achievements: ["Average response time: <30 minutes", "99.5% issue resolution rate", "Expert troubleshooter"]
+    // },
+    // {
+    //   name: "Maria Gonzalez",
+    //   role: "Operations Coordinator",
+    //   icon: <FaTools className="w-8 h-8" />,
+    //   responsibilities: ["Project Scheduling", "Resource Management", "Quality Assurance"],
+    //   experience: "6+ years in operations management",
+    //   achievements: ["Streamlined operations efficiency by 40%", "Zero missed deadlines in 2024", "Process optimization specialist"]
+    // },
+    // {
+    //   name: "Robert Chen",
+    //   role: "Safety & Compliance Officer",
+    //   icon: <FaShieldAlt className="w-8 h-8" />,
+    //   responsibilities: ["Safety Protocol Development", "Regulatory Compliance", "Risk Management"],
+    //   experience: "10+ years in industrial safety",
+    //   achievements: ["Zero safety incidents", "100% regulatory compliance", "Certified safety professional"]
+    // }
   ];
 
   const services = [

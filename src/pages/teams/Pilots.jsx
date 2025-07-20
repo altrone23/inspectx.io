@@ -27,17 +27,15 @@ const Pilots = () => {
         </button>
       ),
       image: KalyanImg,
-      
       experience:
-        "Creative visual artist turned aviation technology specialist. 12+ years commercial aviation, 5+ years drone operations. Extensive flight hours in commercial and industrial applications: infrastructure inspections, land surveys, environmental monitoring, and construction documentation.",
-
+        "A passionate visual storyteller turned aviation specialist, Mr. Kalyan Reddy began his creative journey as a photo artist, capturing compelling perspectives through the lens. Driven by a fascination for aerial imagery and innovative technology, he transitioned into the world of unmanned aviation, becoming a certified Remote Pilot (RPC). Today, Mr. Reddy serves as the Lead Remote Pilot at InspectX, where he combines his artistic eye with technical precision to lead complex drone inspection missions across diverse industries. With a strong foundation in photography and years of hands-on flight experience, Mr. Reddy brings a unique blend of creativity, safety-first mindset, and operational excellence to every project. Skilled in mission planning, data capture, and post-processing analytics, he is instrumental in delivering high-quality aerial insights that empower clients to make informed decisions. Whether inspecting infrastructure, conducting surveys, or capturing high-resolution imagery, Mr. Reddy continues to elevate the standards of drone operations through innovation and leadership.",
       specialties: [
-        "Mission Design & Execution: Detailed flight plans, regulatory compliance",
-        "Operational Leadership: Training, mentoring, safety, and data quality",
-        "Data Acquisition & Analysis: High-res imagery, sensor data, actionable insights",
+        "Mission Planning & Execution: Creative flight plans, regulatory compliance",
+        "Operational Leadership: Safety-first mindset, mentoring, and data quality",
+        "Data Capture & Analytics: High-res imagery, post-processing, actionable insights",
         "Client Engagement: Project scoping, technical and visual solution delivery",
-        "Merging artistry with precision engineering for visually stunning, accurate aerial content",
-        "Continuous learning and innovation in drone technology and airspace regulations"
+        "Blending artistry with precision engineering for impactful aerial content",
+        "Continuous innovation in drone technology and inspection methodologies"
       ],
       profile: (
         <div className="bg-white rounded-2xl shadow-2xl max-w-md mx-auto p-8 text-gray-900">
@@ -50,54 +48,26 @@ const Pilots = () => {
             <h2 className="text-2xl font-bold text-orange-500 mb-1">Kalyan Reddy</h2>
             <p className="text-sm text-red-500 mb-4">Chief Pilot & Flight Operations Manager</p>
             <p className="text-gray-700 text-sm mb-4 text-center">
-              Mr. Kalyan Reddy is a creative visual artist turned aviation technology specialist, currently leading operations as the Lead Remote Pilot at InspectX. With roots in photography and visual storytelling, he developed a keen eye for composition and technical finesse — qualities that laid the foundation for his transition into unmanned aerial systems (UAS).
+              A passionate visual storyteller turned aviation specialist, Mr. Kalyan Reddy began his creative journey as a photo artist, capturing compelling perspectives through the lens. Driven by a fascination for aerial imagery and innovative technology, he transitioned into the world of unmanned aviation, becoming a certified Remote Pilot (RPC).
               <br /><br />
-              Motivated by a desire to capture the world from new heights, he earned his Remote Pilot Certificate (RPC) and quickly advanced, combining artistic background with aviation technology, safety protocols, and remote sensing. He has accumulated extensive flight hours across commercial and industrial applications — including infrastructure inspections, land surveys, environmental monitoring, and construction documentation.
+              Today, Mr. Reddy serves as the Lead Remote Pilot at InspectX, where he combines his artistic eye with technical precision to lead complex drone inspection missions across diverse industries. With a strong foundation in photography and years of hands-on flight experience, Mr. Reddy brings a unique blend of creativity, safety-first mindset, and operational excellence to every project.
               <br /><br />
-              At InspectX, Mr. Reddy leads a team of drone pilots, overseeing mission planning, flight execution, risk assessment, and data analysis. He is responsible for:
+              Skilled in mission planning, data capture, and post-processing analytics, he is instrumental in delivering high-quality aerial insights that empower clients to make informed decisions. Whether inspecting infrastructure, conducting surveys, or capturing high-resolution imagery, Mr. Reddy continues to elevate the standards of drone operations through innovation and leadership.
             </p>
             <ul className="text-gray-700 text-sm mb-4 list-disc list-inside text-left">
-              <li><b>Mission Design & Execution:</b> Creating detailed flight plans and ensuring regulatory compliance.</li>
-              <li><b>Operational Leadership:</b> Training and mentoring new pilots, upholding safety and data quality.</li>
-              <li><b>Data Acquisition & Analysis:</b> Capturing high-res imagery and collaborating for actionable insights.</li>
-              <li><b>Client Engagement:</b> Understanding project goals and delivering technical and visual solutions.</li>
+              <li><b>Mission Planning & Execution:</b> Creative flight plans and regulatory compliance.</li>
+              <li><b>Operational Leadership:</b> Safety-first mindset, mentoring, and data quality.</li>
+              <li><b>Data Capture & Analytics:</b> High-res imagery, post-processing, actionable insights.</li>
+              <li><b>Client Engagement:</b> Project scoping, technical and visual solution delivery.</li>
             </ul>
             <p className="text-gray-700 text-sm mb-2 text-center">
-              What sets him apart is the ability to merge artistry with precision engineering — crafting visually stunning and technically accurate aerial content that supports real-world decision-making. His background in photography enhances every flight, adding immense value to aerial inspections.
-              <br /><br />
-              Always at the forefront of drone technology and airspace regulations, Mr. Reddy is committed to continuous learning and innovation, pushing the boundaries of aerial data capture and visual inspection.
+              Blending artistry with precision engineering for impactful aerial content. Always at the forefront of drone technology and inspection methodologies, Mr. Reddy is committed to continuous innovation, pushing the boundaries of aerial data capture and visual inspection.
             </p>
           </div>
         </div>
       )
     },
-    {
-      name: "Emma Chen",
-      role: "Senior Inspection Pilot",
-      icon: <FaCertificate className="w-8 h-8" />,
-      certifications: ["Part 107 Remote Pilot", "Visual Observer Certified", "Industrial Inspection Specialist"],
-      experience: "6+ years drone inspection operations",
-      flightHours: "1,800+",
-      specialties: ["Solar Panel Inspections", "Power Line Surveys", "Precision Maneuvers"]
-    },
-    {
-      name: "James Thompson",
-      role: "Railway Inspection Specialist",
-      icon: <FaMapMarkedAlt className="w-8 h-8" />,
-      certifications: ["Part 107 Remote Pilot", "Railway Safety Certified", "Beyond Visual Line of Sight"],
-      experience: "4+ years railway inspection focus",
-      flightHours: "1,200+",
-      specialties: ["Railway Track Inspection", "Long-Distance Surveys", "Terrain Navigation"]
-    },
-    {
-      name: "Dr. Lisa Park",
-      role: "R&D Flight Test Pilot",
-      icon: <FaTrophy className="w-8 h-8" />,
-      certifications: ["Part 107 Remote Pilot", "Experimental Aircraft", "Research Operations"],
-      experience: "8+ years aerospace research, 3+ years drone testing",
-      flightHours: "1,500+",
-      specialties: ["Prototype Testing", "Advanced AI Integration", "Flight Pattern Optimization"]
-    }
+    // Additional pilots can be added here
   ];
 
   // Profile card modal for Kalyan Reddy
@@ -118,7 +88,7 @@ const Pilots = () => {
   // End modal
 
   const equipment = [
-    { name: "DJI Matrice 300 RTK", purpose: "Heavy-duty industrial inspections" },
+    { name: "DJI Matrice 350 RTK", purpose: "Heavy-duty industrial inspections" },
     { name: "DJI Mavic 3 Enterprise", purpose: "Precision detail work" },
     { name: "Custom AI-Powered Drones", purpose: "Specialized inspection tasks" },
     { name: "Thermal Imaging Systems", purpose: "Heat signature analysis" },

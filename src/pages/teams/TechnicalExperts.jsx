@@ -18,7 +18,7 @@ const TechnicalExperts = () => {
         "Data Analysis"
       ],
       experience:
-        "I’m a passionate AI & Data Science engineer with a strong foundation in both software development and intelligent systems. I love building powerful, scalable applications that solve real-world problems — combining deep learning models, clean code, and smart design.\n\nTechnical Skills:\nLanguages & Frameworks: Python, JavaScript, React, Node.js, Express\nAI/ML Tools: TensorFlow, PyTorch, Scikit-learn\nData Handling: Pandas, NumPy, SQL\nFull Stack: REST APIs, MongoDB, Firebase, TailwindCSS\nTools: Git, VS Code, Postman",
+        "Passionate AI & Data Science engineer with expertise in software development and intelligent systems. Skilled in building scalable applications that solve real-world problems by combining deep learning models, clean code, and smart design.\n\nTechnical Skills:\nLanguages & Frameworks: Python, JavaScript, React, Node.js, Express\nAI/ML Tools: TensorFlow, PyTorch, Scikit-learn\nData Handling: Pandas, NumPy, SQL\nFull Stack: REST APIs, MongoDB, Firebase, TailwindCSS\nTools: Git, VS Code, Postman",
       achievements: [
         "Built and deployed full-stack apps integrating AI features",
         "Worked on projects involving image recognition, NLP, and data pipelines",
@@ -27,32 +27,60 @@ const TechnicalExperts = () => {
     },
     {
       name: "Kavirajan.E",
-      role: "AI Engineer ,Developer & DevOps Engineer",
+      role: "AI Engineer, Developer & DevOps Engineer",
       image: require('../../assets/techteam/kavirajan.jpg'),
-      specialties: ["Full-Stack Development", "Cloud Architecture", "DevOps","AI/ML Engineering"],
-      experience: "I’m a passionate AI & Data Science engineer with a strong foundation in both software development and intelligent systems. I love building powerful, scalable applications that solve real-world problems — combining deep learning models, clean code, and smart design. Technical Skills: Languages & Frameworks: Python, JavaScript, React, Node.js, Express AI/ML Tools: TensorFlow, PyTorch, Scikit-learn Data Handling: Pandas, NumPy, SQL Full Stack: REST APIs, MongoDB, Firebase, TailwindCSS Tools: Git, VS Code, Postman",
+      specialties: [
+        "Machine Learning",
+        "Computer Vision",
+        "Full Stack Development",
+        "Cloud Architecture",
+        "DevOps",
+        "AI/ML Engineering"
+      ],
+      experience:
+        "Experienced AI engineer and developer with a strong background in cloud architecture and DevOps. Skilled in deploying scalable machine learning solutions and managing end-to-end development workflows.\n\nTechnical Skills:\nLanguages & Frameworks: Python, JavaScript, React, Node.js\nCloud & DevOps: AWS, Docker, Kubernetes, CI/CD\nAI/ML Tools: TensorFlow, PyTorch\nFull Stack: REST APIs, MongoDB, PostgreSQL\nTools: Git, VS Code, Postman",
       achievements: [
-        "Built and deployed full-stack apps integrating AI features",
-        "Worked on projects involving image recognition, NLP, and data pipelines",
-        "Completed internships and freelance work that involved real-world AI problem-solving",
+        "Deployed cloud-based AI solutions for enterprise clients",
+        "Automated CI/CD pipelines for machine learning projects",
+        "Collaborated on full-stack applications with integrated computer vision features",
       ]
     },
-    // {
-    //   name: "Sarah Johnson",
-    //   role: "Drone Systems Engineer",
-    //   image: require('../../assets/techteam/sarah.jpg'),
-    //   specialties: ["Drone Hardware", "Flight Control Systems", "Sensor Integration"],
-    //   experience: "6+ years in drone technology",
-    //   achievements: ["Certified drone pilot", "Hardware integration specialist", "Safety systems expert"]
-    // },
-    // {
-    //   name: "Dr. Ahmed Hassan",
-    //   role: "Computer Vision Specialist",
-    //   image: require('../../assets/techteam/ahmed.jpg'),
-    //   specialties: ["Image Processing", "Pattern Recognition", "3D Reconstruction"],
-    //   experience: "12+ years in computer vision",
-    //   achievements: ["PhD in Computer Vision", "20+ patents filed", "Industry recognition awards"]
-    // }
+    {
+      name: "Rokesh Kumar.K",
+      role: "Backend Developer",
+      // image: require('../../assets/techteam/sarah.jpg'),
+      specialties: [
+        "Backend Development",
+        "API Design",
+        "Database Management",
+        "Cloud Deployment"
+      ],
+      experience:
+        "Skilled backend developer with experience in designing robust APIs and managing databases for scalable applications. Familiar with cloud deployment and automation.",
+      achievements: [
+        "Developed RESTful APIs for inspection platforms",
+        "Optimized database performance for large-scale data",
+        "Implemented cloud deployment strategies for backend services",
+      ]
+    },
+    {
+      name: "Manoj.K",
+      role: "Network Engineer & Administrator",
+      //image: require('../../assets/techteam/ahmed.jpg'),
+      specialties: [
+        "Network Administration",
+        "System Security",
+        "Cloud Networking",
+        "Infrastructure Automation"
+      ],
+      experience:
+        "Experienced network engineer with expertise in managing secure and reliable infrastructure for AI-powered applications. Skilled in automation and cloud networking.",
+      achievements: [
+        "Designed secure network architectures for inspection systems",
+        "Automated infrastructure provisioning and monitoring",
+        "Ensured high availability and security for cloud-based platforms",
+      ]
+    }
   ];
 
   const technologies = [
